@@ -1,0 +1,178 @@
+html {
+	background-color: #173b70;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	color: #babdc4;
+	background-color: #021c44;
+	margin: 0 12%;
+	padding: 0;
+	overflow: auto;
+}
+
+.noScroll {
+	overflow: hidden;
+}
+
+a:link {
+	color: #8c87c6;
+}
+
+a:visited {
+	color: #cdc9ff;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    color: #467687;
+}
+
+input:focus, textarea:focus {
+    background: white;
+}
+
+ul {
+	list-style-type: none;
+	background-color: #333;
+	margin: 0 25%;
+	padding: 0;
+	text-align: justify;
+}
+
+ul:after {
+	content: '.';
+	display: inline-block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	color: #021c44;
+	background-color: #021c44;
+} /*The '.' is the text, and I just matched the color*/
+
+li {
+	display: inline-block;
+}
+
+li a:link {
+	display: inline-block;
+	padding: 10px 20px;
+	color: #e2e0ff;
+	text-align: center;
+	text-decoration: none;
+	font-family: "Spicy Rice", "Lucida Grande", sans-serif
+}
+
+li a:visited {
+	color: #e2e0ff;
+}
+
+li:hover {
+	background-color: #4CAF50;
+}
+
+#nav {
+	
+}
+
+.currentPage a:link {
+	background-color: #0349b5;
+}
+
+h1 {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	text-align: left;
+	margin: 0 5%;
+	margin-bottom: 3%;
+	padding: 0;
+	padding-left: 2%;
+	font-size: 3em;
+	border-left-style: solid;
+}
+
+h1 a:link {
+	text-decoration: none;
+}
+
+img {
+	padding: 2% 0;
+}
+
+.social {
+	background-color: #021c44;
+	position: absolute;
+	top: 0;
+	right: 15%;
+	margin: 0;
+}
+
+.center {
+	text-align: center;
+	margin: 0 25%;
+}
+
+p {
+	margin: 0 5%;
+	padding-bottom: 5%;
+}
+
+section {
+	margin: 2% 0 0 2%;
+	padding: 2% 5% 3% 3%;
+	border-left: 4px purple dashed;
+}
+
+footer {
+	background-color: #333;
+	text-align: center;
+	width: 100%;
+}
+
+@media only screen and (max-width:768px) {
+	/* For mobile phones: */
+	html {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		background-color: green;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		background-color: red;
+	}
+
+	h1 {
+		padding: 0;
+		font-size: 2em;
+		text-align: center;
+	}
+
+	.center {
+		text-align: center;
+		margin: 0 25%;
+	}
+
+	#about {
+		margin: 0 10%;
+		font-size: 18px;
+	}
+
+	section, p {
+		font-size: 18px;
+	}
+
+	#nav {
+		text-align: center;
+	}
+
+	.social {
+		visibility: hidden;
+	}
+}
