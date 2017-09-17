@@ -5,7 +5,8 @@
 	<title>Sandeep</title>
 	<meta charset="utf-8">
 	<meta name="description" content="This is Sandeep Singh's personal page!">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
 	<link href='https://fonts.googleapis.com/css?family=Spicy Rice' rel='stylesheet'>
 
 </head>
@@ -20,12 +21,12 @@
 		<li><a href="https://soundcloud.com/gameexpert36"><img src="Sc.png" width="30px"></a></li>
 	</ul>
 
-	<ul id="nav">
-		<li><a href="index.html">home</a></li>
-		<li><a href="music.html">music</a></li>
-		<li><a href="blog.html">blog</a></li>
-		<li class="currentPage"><a href="art.html">art</a></li>
-		<li><a href="contact.html">contact</a></li>
+	<ul class="w3-bar" id="nav">
+		<li class="w3-bar-item"><a href="index.html">home</a></li>
+		<li class="w3-bar-item"><a href="music.html">music</a></li>
+		<li class="w3-bar-item"><a href="blog.html">blog</a></li>
+		<li class="w3-bar-item"><a href="art.html">art</a></li>
+		<li class="w3-bar-item"><a href="contact.html">contact</a></li>
 	</ul>
 
 	<div class="center">
@@ -41,34 +42,52 @@
 		<img class="mySlides" src="maractus.jpg" style="width:100%">
 		<img class="mySlides" src="sandslash.jpg" style="width:100%">
 		<img class="mySlides" src="accelgor.jpg" style="width:100%">
-		
-		<button onclick="plusDivs(-1)">&#10094;</button>
-		<button onclick="plusDivs(1)">&#10095;</button>
+        
+        <div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
+        <div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
 	</div>
 
 	<script>
-		var slideIndex = 1;
+        var slideIndex = 1;
+        // display default
 		showDivs(slideIndex);
 
+        // func for +-1 according to arrow clicked on
 		function plusDivs(n) {
 			showDivs(slideIndex += n);
 		}
 
-		function showDivs(n) {
+		function showDivs(n) 
+        {
 			var i;
+            // get total num of slides
 			var x = document.getElementsByClassName("mySlides");
+            // displays dots
+            var dots = document.getElementsByClassName("dot");
+            
+            // ifs are wraps either to the start or end
 			if (n > x.length) {slideIndex = 1}    
 			if (n < 1) {slideIndex = x.length}
 			
+            // set all pics hidden/none
 			for (i = 0; i < x.length; i++) {
-				x[i].style.display = "none";  
-			}
+				x[i].style.display = "none";
+            }
 		
-		x[slideIndex-1].style.display = "block";  
+            // set all dots as colorless
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-white", "");
+            }
+            
+            // set that one pic to visible
+            x[slideIndex-1].style.display = "block";
+            // same with the current dot
+            dots[slideIndex-1].className += " w3-white";
 		}
 	</script>
 
-	<p>More sketches coming soon!</p>
+    <br>
+	<p class="center">More sketches coming soon!</p>
 	
 	<footer>
 	

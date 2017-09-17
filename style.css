@@ -17,6 +17,7 @@ body {
 }
 
 a:link {
+    text-align: center;
 	color: #8c87c6;
 }
 
@@ -39,20 +40,15 @@ input:focus, textarea:focus {
 ul {
 	list-style-type: none;
 	background-color: #333;
-	margin: 0 25%;
+	margin: 0;
 	padding: 0;
 	text-align: justify;
 }
 
-ul:after {
-	content: '.';
-	display: inline-block;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	color: #021c44;
-	background-color: #021c44;
-} /*The '.' is the text, and I just matched the color*/
+.w3-bar {
+    width: 60%;
+    margin: 0 20%;
+}
 
 li {
 	display: inline-block;
@@ -60,9 +56,8 @@ li {
 
 li a:link {
 	display: inline-block;
-	padding: 10px 20px;
+	padding: 5px;
 	color: #e2e0ff;
-	text-align: center;
 	text-decoration: none;
 	font-family: "Spicy Rice", "Lucida Grande", sans-serif
 }
@@ -75,8 +70,9 @@ li:hover {
 	background-color: #4CAF50;
 }
 
-#nav {
-	
+#nav li {
+    text-align: center;
+	width: 20%
 }
 
 .currentPage a:link {
@@ -99,13 +95,13 @@ h1 a:link {
 }
 
 img {
-	padding: 2% 0;
+	padding-top: 2%;
 }
 
 .social {
 	background-color: #021c44;
 	position: absolute;
-	top: 0;
+	top: 5px;
 	right: 15%;
 	margin: 0;
 }
@@ -117,13 +113,19 @@ img {
 
 p {
 	margin: 0 5%;
-	padding-bottom: 5%;
+	padding-bottom: 15px;
+}
+
+#about {
+    text-align: center;
 }
 
 section {
-	margin: 2% 0 0 2%;
-	padding: 2% 5% 3% 3%;
-	border-left: 4px purple dashed;
+    /*background-color: #8B4789;*/
+	margin: 2% 3% 3% 2%;
+	padding: 1% 2% 2% 2%;
+	border-left: 3px #68228B solid;
+    border-top: 2px #B23AEE solid;
 }
 
 footer {
@@ -159,20 +161,22 @@ footer {
 		margin: 0 25%;
 	}
 
-	#about {
-		margin: 0 10%;
-		font-size: 18px;
-	}
-
 	section, p {
 		font-size: 18px;
 	}
 
-	#nav {
-		text-align: center;
-	}
+
 
 	.social {
 		visibility: hidden;
 	}
+}
+
+
+.w3-left, .w3-right {
+    cursor: pointer;
+}
+
+form {
+    margin: 0 15%
 }
