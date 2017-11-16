@@ -5,10 +5,17 @@
 	<title>Sandeep</title>
 	<meta charset="utf-8">
 	<meta name="description" content="This is Sandeep Singh's personal page!">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet" href="style.css">
-	<link href='https://fonts.googleapis.com/css?family=Spicy Rice' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Spicy Rice' rel='stylesheet'>
 
 </head>
 
@@ -16,25 +23,41 @@
 <body>
 	<h1><a href="index.html">Sandeep</a></h1>
 
-	<ul class="social">
+	<ul class="social hidden-xs">
 		<li><a href="https://www.facebook.com/sandeepsingh23"><img src="Fb.png" width="30px"></a></li>
 		<li><a href="https://www.instagram.com/toodeep11/"><img src="insta.png" width="30px"></a></li>
 		<li><a href="https://soundcloud.com/gameexpert36"><img src="Sc.png" width="30px"></a></li>
 	</ul>
 
-	<ul class="w3-bar" id="nav">
-		<li class="w3-bar-item"><a href="index.html">home</a></li>
-		<li class="w3-bar-item"><a href="music.html">music</a></li>
-		<li class="w3-bar-item"><a href="blog.html">blog</a></li>
-		<li class="w3-bar-item"><a href="art.html">art</a></li>
-		<li class="w3-bar-item"><a href="contact.html">contact</a></li>
-	</ul>
+	<nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="navbar-brand">Menu</div>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">        
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">home</a></li>
+                    <li class="active"><a href="music.html">music</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li><a href="art.html">art</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-	<img class="center" src="Music.jpg" width=50% height=50% alt="Some mangroves">
+	<img class="img-responsive" src="Music.jpg" alt="Some mangroves">
 
 	<iframe class="center" width="50%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/314459579&amp; color=ff5500&amp; auto_play=false&amp; hide_related=false&amp; show_comments=true&amp; show_user=true&amp; show_reposts=false">
 	</iframe>
 
+    <div class="text-center w3-panel w3-green w3-round">Music!</div>
+    
 	<section>
 	<strong>Freaky Fantasy (April 2016 - October 2016)</strong> - This is my first 'professional' piece that I composed; Freaky Fantasy. I wanted to do more of a spooky theme, and I think I did pretty decent job as a rookie. This was a time where a friend of mine made me appreciate the spooky, mysterious side of the world (this topic was already interesting to me, but now I wanted to spend more time in this realm), so part of this song is inspired from a new fascination for the creepy side.<br><br>
 	Why I chose this title for the song is because of the meaning behind the words. <em>Freaky</em> obviously points to something weird or unusual. In fact, when I type 'freaky definition' into Google, the definition is, 'very odd, strange, or eccentric'. Building from there, <em>freaky</em>, to me, also represents the unorthodox ideas. This can be anything that people and society seem to brush off for whatever reason, like it's too weird, it's 'evil', lack of information, or simply a misunderstanding. In many cases these different, diverse ideas are rejected because of fear of the unknown. But with some knowledge and an open mind, these awkward notions become beautiful and valuable, which is where the <em>fantasy</em> comes in. This is the magical world in which all things weird and different exist and are portrayed in a magnificent and enchanting way. So I wanted to bridge these two motifs, of living in a marvelous world where conformity is nonexistent, and musically create an atmosphere where the scary, yet fascinating, themes can be given the chance to be conjured into this realm by an open-minded audience.
@@ -47,20 +70,30 @@
 	...and then...
 	</section>
 
-	<footer>
-	
-		<a href="index.html">Home</a>
-		<a href="music.html">Music</a>
-		<a href="blog.html">Blog</a>
-		<a href="art.html">Art</a>
-		<a href="contact.html">Contact</a>
+	<footer class="panel panel-info hidden-xs">
+        <div class="container-fluid">
+            <div class="row, text-center">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-2"><a href="index.html">home</a></div>
+                <div class="col-sm-2"><a href="music.html">music</a></div>
+                <div class="col-sm-2"><a href="blog.html">blog</a></div>
+                <div class="col-sm-2"><a href="art.html">Art</a></div>
+                <div class="col-sm-2"><a href="contact.html">Contact</a></div>
+                <div class="col-sm-1"></div>
+            </div>
+        </div>
 	
 		<br>
 	
-		<a href="https://www.facebook.com/profile.php?id=100001044740283">Facebook</a>
-		<a href="https://www.instagram.com/toodeep11/">Instagram</a>
-		<a href="https://soundcloud.com/gameexpert36">SoundCloud</a>
-	
+        <div class="container-fluid">
+            <div class="row, text-center">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-3"><a href="https://www.facebook.com/profile.php?id=100001044740283">Facebook</a></div>
+                <div class="col-sm-4"><a href="https://www.instagram.com/toodeep11/">Instagram</a></div>
+                <div class="col-sm-3"><a href="https://soundcloud.com/gameexpert36">SoundCloud</a></div>
+                <div class="col-sm-1"></div>
+            </div>
+        </div>
 	</footer>
 </body>
 </html>
