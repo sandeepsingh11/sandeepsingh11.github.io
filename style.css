@@ -23,6 +23,10 @@ h1 {
     border-left-style: solid;
 }
 
+h2 { 
+    color: darkblue;
+}
+
 #landing {
     height: inherit;
     margin: 0;
@@ -37,6 +41,10 @@ h1 {
     background-attachment: fixed;
     height: inherit;
     margin: 0;
+}
+
+.jumbotron h1 {
+    color: #333;
 }
 
 .CTA {
@@ -146,8 +154,16 @@ footer {
         min-height: inherit;
     }
 
+    h2 { 
+        color: white;
+    }
+    
     .jumbotron {
         background-image: url(img/bridgewalk.jpg);
+    }
+    
+    .jumbotron h1 {
+        color: white;
     }
     
     .noScroll {
