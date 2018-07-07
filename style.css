@@ -90,13 +90,14 @@ h1 {
 }
 
 .CTA div a {
-  -webkit-transition: padding 0.5s;
+  -webkit-transition: background-color 0.5s;
   /* Safari */
-  transition: padding 0.5s;
+  transition: background-color 0.5s;
 }
 
 .CTA div a:hover {
-  padding: 15px 21px;
+  background-color: #5BC0DE;
+  /* light blue */
 }
 
 p {
@@ -298,7 +299,7 @@ footer {
 }
 
 @media only screen and (min-width:1024px) {
-  /* For medium and large screens */
+  /* For large screens */
   body {
     margin: 0 10%;
     min-height: inherit;
@@ -313,7 +314,6 @@ footer {
   }
 
   #landingContent {
-    width: 100%;
     height: auto;
     margin: 8% auto;
   }
