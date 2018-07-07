@@ -1,98 +1,104 @@
 <!DOCTYPE html>
 <html>
-    <head>
 
-      <title>Sandeep Singh</title>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta charset="utf-8">
-      <meta name="description" content="Welcome to Sandeep's website! I'm an Information
+<head>
+
+  <title>Sandeep Singh</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="description" content="Welcome to Sandeep's website! I'm an Information
       Technology student at UCF who loves to code. Currently seeking a Bachelor's degree,
       so check out what I have to offer!">
-      <meta name="keywords" content="information technology, IT, UCF, university, code, technology, web design,
+  <meta name="keywords" content="information technology, IT, UCF, university, code, technology, web design,
       web development, computer, digital media, vegan, homepage">
-      <meta name="author" content="Sandeep Singh">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Sandeep Singh">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112795673-1"></script>
-      <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112795673-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-          gtag('config', 'UA-112795673-1');
-      </script>
-      <!-- End Global site tag -->
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-        <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="style.css">
+    gtag('config', 'UA-112795673-1');
+  </script>
+  <!-- End Global site tag -->
 
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="style.css">
 
-        <link href='https://fonts.googleapis.com/css?family=Spicy Rice' rel='stylesheet'>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
-    </head>
+  <link href='https://fonts.googleapis.com/css?family=Spicy Rice' rel='stylesheet'>
+
+</head>
 
 
-    <body id="landing">
+<body id="landing">
 
-        <div class="jumbotron">
+  <!-- background image -->
+  <div class="heroImg"></div>
 
-          <div id="intro" style="text-shadow: 3px 3px 2px #babdc4">
-            <h1 class="center">Sandeep Singh</h1>
+  <!-- landing page content -->
+  <div id="landingContent">
+    <div>
+      <h1 class="center">Sandeep Singh</h1>
 
-            <h2 class="center" style="margin: 10% 0;">
-                Welcome to my website!
-            </h2>
+      <h2 class="center">
+      Welcome to my website!</h2>
+    </div>
+
+    <div class="CTA">
+      <!-- CTA buttons; smaller screens -->
+      <div class="visible-xs visible-sm container">
+        <div class="row">
+          <div class="col-xs-2"></div>
+          <div class="col-xs-8">
+            <a href="about.html" class="btn btn-primary btn-lg btn-block">About me</a>
           </div>
-
-            <div class="CTA">
-                <!-- CTA buttons; smaller screens -->
-                <div class="visible-xs visible-sm container">
-                    <div class="row" style="margin-bottom: 8%">
-                        <div class="col-xs-2"></div>
-                        <div class="col-xs-8">
-                            <a href="about.html" class="btn btn-primary btn-lg btn-block">About me</a>
-                        </div>
-                        <div class="col-xs-2"></div>
-                    </div>
-
-                    <div class="row" style="margin-bottom: 8%">
-                        <div class="col-xs-2"></div>
-                        <div class="col-xs-8">
-                            <a href="resume.html" class="btn btn-primary btn-lg btn-block">Resume</a>
-                        </div>
-                        <div class="col-xs-2"></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xs-2"></div>
-                        <div class="col-xs-8">
-                            <a href="contact.html" class="btn btn-primary btn-lg btn-block">Contact me</a>
-                        </div>
-                        <div class="col-xs-2"></div>
-                    </div>
-                </div>
-
-                <!-- CTA buttons; larger screens -->
-                <div class="visible-md visible-lg container">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <a href="about.html" class="btn btn-primary btn-lg center">About me</a>
-                        </div>
-                        <div class="col-sm-4">
-                            <a href="resume.html" class="btn btn-primary btn-lg center">Resume</a>
-                        </div>
-                        <div class="col-sm-4">
-                            <a href="contact.html" class="btn btn-primary btn-lg center">Contact me</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+          <div class="col-xs-2"></div>
         </div>
 
-    </body>
+        <div class="row" >
+          <div class="col-xs-2"></div>
+          <div class="col-xs-8">
+            <a href="resume.html" class="btn btn-primary btn-lg btn-block">Resume</a>
+          </div>
+          <div class="col-xs-2"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-2"></div>
+          <div class="col-xs-8">
+            <a href="contact.html" class="btn btn-primary btn-lg btn-block">Contact me</a>
+          </div>
+          <div class="col-xs-2"></div>
+        </div>
+      </div>
+
+      <!-- CTA buttons; larger screens -->
+      <div class="visible-md visible-lg container">
+        <div class="row">
+          <div class="col-sm-4">
+            <a href="about.html" class="btn btn-primary btn-lg center">About me</a>
+          </div>
+          <div class="col-sm-4">
+            <a href="resume.html" class="btn btn-primary btn-lg center">Resume</a>
+          </div>
+          <div class="col-sm-4">
+            <a href="contact.html" class="btn btn-primary btn-lg center">Contact me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
 </html>

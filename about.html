@@ -1,104 +1,168 @@
 <!DOCTYPE html>
 <html>
-    <head>
 
-        <title>Sandeep Singh</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta charset="utf-8">
-        <meta name="description" content="Welcome to Sandeep's website! I'm an Information
+<head>
+
+  <title>Sandeep Singh</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="description" content="Welcome to Sandeep's website! I'm an Information
         Technology student at UCF who loves to code. Check out how awesome I am by reading my bio!">
-        <meta name="keywords" content="information technology, IT, UCF, university, code, technology, web design,
+  <meta name="keywords" content="information technology, IT, UCF, university, code, technology, web design,
         web development, computer, digital media, vegan, about, about me">
-        <meta name="author" content="Sandeep Singh">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Sandeep Singh">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112795673-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112795673-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-            gtag('config', 'UA-112795673-1');
-        </script>
-        <!-- End Global site tag -->
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-        <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="style.css">
+    gtag('config', 'UA-112795673-1');
+  </script>
+  <!-- End Global site tag -->
 
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="style.css">
 
-        <link href='https://fonts.googleapis.com/css?family=Spicy Rice' rel='stylesheet'>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
-    </head>
+  <link href='https://fonts.googleapis.com/css?family=Spicy Rice' rel='stylesheet'>
+
+</head>
 
 
-    <body>
-        <h1><a href="index.html">Sandeep</a></h1>
+<body>
+  <h1 id="name"><a href="index.html">Sandeep Singh</a></h1>
 
-        <nav class="navbar navbar-inverse" role="navigation">
-            <div class="container-fluid">
 
-                <div class="visible-xs navbar-header">
-                    <div class="navbar-brand">Menu</div>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNav">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
+  <!-- navbar -->
+  <div class="navbar">
+    <div class="w3-bar" id="barContainer">
+      <!-- desktop navbar -->
+      <div id="activeBar"></div>
+      <a href="index.html" class="w3-bar-item w3-button navItem">home</a>
+      <a href="about.html" class="w3-bar-item w3-button w3-hide-small navItem active">about</a>
+      <a href="resume.html" class="w3-bar-item w3-button w3-hide-small navItem">resume</a>
+      <a href="contact.html" class="w3-bar-item w3-button w3-hide-small navItem">contact</a>
 
-                <div class="collapse navbar-collapse" id="mainNav">
-                    <ul class="row center">
-                        <li class="col-sm-4">
-                            <a href="about.html" type="btn">about</a>
-                        </li>
-                        <li class="col-sm-4">
-                            <a href="resume.html" type="btn">resume</a>
-                        </li>
-                        <li class="col-sm-4">
-                            <a href="contact.html" type="btn">contact</a>
-                        </li>
-                    </ul>
-                </div>
+      <!-- toggle the dropdown for mobile -->
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="dropdown()">&#9776;</a>
+    </div>
 
-            </div>
-        </nav>
+    <!-- mobile navbar -->
+    <div id="dropdownNav" class="w3-bar-block w3-hide-large w3-hide-medium">
+      <a href="about.html" class="w3-bar-item w3-button active">about</a>
+      <a href="resume.html" class="w3-bar-item w3-button">resume</a>
+      <a href="contact.html" class="w3-bar-item w3-button">contact</a>
+    </div>
+  </div>
 
-        <div class="container-fluid" style="text-align: center; margin-bottom: 7%">
-            <img class="w3-image" src="img/MK.jpg" alt="UCF Marching Knights" style="width: 100%; max-width: 600px; padding-bottom: 5px">
-            <h5>Photo credit: Mike Kitaif</h5>
-        </div>
 
-        <div class="w3-panel w3-green w3-round center">About me!</div>
 
-        <p class="text-center">
-        Hi there, welcome to my page! I'm Sandeep, and I'm a warm candle shining though the mysterious areas of life, as my name indicates. I currently study at UCF, majoring in Information Technology while minoring in Digital Media. I have a passion for creating stuff, whether they're websites, music, code, drawings, or on Minecraft. I like to have a philosophical outlook on life, finding and questioning the very nature and ethics of, well, everything. Metaphysics and healthy vibes are another interest of mine. Oh, and I'm vegan!
-        </p>
+  <!-- page header -->
+  <div class="header">
+    <p>About me!</p><img src="img/web-header.jpg"></div>
 
-        <footer class="panel" style="background-color: #333; color: azure">
-            <div class="hidden-xs container-fluid">
-                <div class="row text-center">
-                    <div class="col-sm-4"><a href="about.html">about</a></div>
-                    <div class="col-sm-4"><a href="resume.html">resume</a></div>
-                    <div class="col-sm-4"><a href="contact.html">contact</a></div>
-                </div>
-            </div>
+  <!-- poloroid image of me -->
+  <div id="polaroid">
+    <img src="img/MK.jpg" alt="UCF Marching Knights">
+    <div class="polaroidText">
+      <h5 style="line-height:27px">Me playing the piccolo<br>
+        Photo credit: <a href="https://www.mikekit.com/">Mike Kitaif</a></h5>
+    </div>
+  </div>
 
-            <div class="container-fluid">
-                <div class="row text-center">
-                    <div class="col-sm-1"></div>
-                    <div class="col-xs-12 col-sm-3"><a href="https://www.facebook.com/sandeepsingh23">Facebook</a></div>
-                    <div class="col-xs-12 col-sm-4"><a href="https://www.instagram.com/toodeep11/">Instagram</a></div>
-                    <div class="col-xs-12 col-sm-3"><a href="https://www.linkedin.com/in/sandeep-singh-ucf">LinkedIn</a></div>
-                    <div class="col-sm-1"></div>
-                </div>
-            </div>
+  <!-- my mini bio -->
+  <div id="bio">
+    <p>
+      Hi there, welcome to my page! I'm Sandeep, and I'm a warm candle shining though the mysterious areas of life, as my name indicates. I currently study at UCF, majoring in Information Technology while minoring in Digital Media. I have a passion for creating
+      stuff, whether they're websites, music, code, drawings, or on Minecraft. I like to have a philosophical outlook on life, finding and questioning the very nature and ethics of, well, everything. Metaphysics and healthy vibes are another interest
+      of mine. Oh, and I'm vegan!
+    </p>
+  </div>
 
-            <h5 style="text-align: center; margin: 0">Made from scratch by Sandeep | 2018 &copy;</h5>
-        </footer>
 
-    </body>
+
+  <!-- footer -->
+  <footer class="panel">
+    <div class="hidden-xs container-fluid">
+      <div class="row text-center">
+        <div class="col-sm-4"><a href="about.html">about</a></div>
+        <div class="col-sm-4"><a href="resume.html">resume</a></div>
+        <div class="col-sm-4"><a href="contact.html">contact</a></div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row text-center">
+        <div class="col-sm-1"></div>
+        <div class="col-xs-12 col-sm-3"><a href="https://www.facebook.com/sandeepsingh23">Facebook</a></div>
+        <div class="col-xs-12 col-sm-4"><a href="https://www.instagram.com/toodeep11/">Instagram</a></div>
+        <div class="col-xs-12 col-sm-3"><a href="https://www.linkedin.com/in/sandeep-singh-ucf">LinkedIn</a></div>
+        <div class="col-sm-1"></div>
+      </div>
+    </div>
+
+    <h5 style="text-align: center; margin: 0">Made from scratch by Sandeep | 2018 &copy;</h5>
+  </footer>
+
+
+
+  <script>
+    // for name title transition and inital set
+    window.onload = function() {
+      // #name <h1>
+      var nameContainer = document.getElementById('name');
+
+      // #name <h1> <a>
+      var name = nameContainer.childNodes[0];
+      name.style.marginLeft = "0px";
+
+      // inital set for mobile dropdown nav
+      var dropdown = document.getElementById("dropdownNav");
+      dropdown.style.height = "0px";
+
+
+      // set inital for activeBar and determine placement
+      var activeBar = document.getElementById("activeBar");
+      activeBar.style.marginLeft = "-290px";
+
+      var navItem = document.getElementsByClassName("active")[0];
+      switch (navItem.text) {
+        case "about":
+          activeBar.style.marginLeft = "25%";
+          break;
+
+        case "resume":
+          activeBar.style.marginLeft = "50%";
+          break;
+
+        case "contact":
+          activeBar.style.marginLeft = "75%";
+          break;
+      }
+    }
+
+    // script for navbar dropdown
+    function dropdown() {
+      var dropdown = document.getElementById("dropdownNav");
+
+      if (dropdown.style.height == "0px") {
+        dropdown.style.height = "150px";
+      } else {
+        dropdown.style.height = "0px";
+      }
+    }
+  </script>
+
+</body>
+
 </html>
