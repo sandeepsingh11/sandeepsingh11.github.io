@@ -68,13 +68,13 @@ h1 {
 }
 
 #landingContent h1 {
-  margin: 30% auto;
+  margin: 10% auto;
   border-left: none;
   padding: 0;
 }
 
 #landingContent h2 {
-  margin: 25% auto;
+  margin: 15% auto;
 }
 
 /* .CTA {
