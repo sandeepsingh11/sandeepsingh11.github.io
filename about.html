@@ -42,306 +42,90 @@
 
 <body id="hoverable">
 
-  <div class="mainContainer">
-    <h1 id="name"><a href="index.html">SANDEEP SINGH</a></h1>
+  <!-- <div class="mainContainer"> -->
+  <h1 id="name"><a href="index.html">SANDEEP SINGH</a></h1>
 
 
-    <!-- navbar -->
-    <div class="navbar">
-      <div class="w3-bar" id="barContainer">
-        <!-- desktop navbar -->
-        <a href="index.html" class="w3-bar-item w3-button navItem" style="position:absolute;top:0;left:33%">home</a>
-        <a href="about.html" class="w3-bar-item w3-button w3-hide-small navItem active" style="position:absolute;top:38%;left:0">about</a>
-        <a href="resume.html" class="w3-bar-item w3-button w3-hide-small navItem" style="position:absolute;top:38%;right:0">resume</a>
-        <a href="contact.html" class="w3-bar-item w3-button w3-hide-small navItem" style="position:absolute;bottom:0;left:28%">contact</a>
-        <img src="img/needle.png" id="needle" style="width:11px;position:absolute;top:14%;left:47%;z-index:3">
+  <!-- navbar -->
+  <div class="navbar">
+    <div class="w3-bar" id="barContainer">
+      <!-- desktop navbar -->
+      <a href="index.html" class="w3-bar-item w3-button navItem" style="position:absolute;top:0;left:33%">home</a>
+      <a href="about.html" class="w3-bar-item w3-button w3-hide-small navItem active" style="position:absolute;top:38%;left:0">about</a>
+      <a href="resume.html" class="w3-bar-item w3-button w3-hide-small navItem" style="position:absolute;top:38%;right:0">resume</a>
+      <a href="contact.html" class="w3-bar-item w3-button w3-hide-small navItem" style="position:absolute;bottom:0;left:28%">contact</a>
+      <img src="img/needle.png" id="needle" style="width:11px;position:absolute;top:14%;left:47%;z-index:3">
 
-        <!-- toggle the dropdown for mobile -->
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="dropdown()">&#9776;</a>
-      </div>
-
-      <!-- mobile navbar -->
-      <div id="dropdownNav" class="w3-bar-block w3-hide-large w3-hide-medium">
-        <a href="about.html" class="w3-bar-item w3-button active">about</a>
-        <a href="resume.html" class="w3-bar-item w3-button">resume</a>
-        <a href="contact.html" class="w3-bar-item w3-button">contact</a>
-      </div>
+      <!-- toggle the dropdown for mobile -->
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="dropdown()">&#9776;</a>
     </div>
 
-
-
-
-
-    <!-- intro -->
-    <div>
-      <div class="center" style="margin:25% auto;">
-        <h2>Welcome to my website!<br><br></h2>
-        <h3>Enter if you dare...</h3>
-      </div>
+    <!-- mobile navbar -->
+    <div id="dropdownNav" class="w3-bar-block w3-hide-large w3-hide-medium">
+      <a href="about.html" class="w3-bar-item w3-button active">about</a>
+      <a href="resume.html" class="w3-bar-item w3-button">resume</a>
+      <a href="contact.html" class="w3-bar-item w3-button">contact</a>
     </div>
+  </div>
+
+
+
+  <img src="img/candle.jpg" id="candle" onclick="letThereBeLight()" style="width:100px;position:fixed;top:10px;left:15px;z-index:2;opacity:0.5;">
 
 
 
 
 
-    <!-- about -->
+
+
+
+
+
+  <!-- intro -->
+  <div id="introContainer" style="position:fixed; top:0">
+    <div class="center" style="margin:25% auto;">
+      <h2>Welcome to my website!<br><br></h2>
+      <h3>Enter if you dare...</h3>
+    </div>
+  </div>
+
+
+  <!-- candle hint -->
+
+  <!-- about -->
+  <div id="aboutContainer" style="position:fixed; top:0; left:1000px">
+
     <div class="header">
-      <p>About me!</p><img src="img/web-header.jpg"></div>
-
-
-    <!-- candle hint -->
-    <img src="img/candle.jpg" id="candle" onclick="letThereBeLight()" style="width:100px;position:fixed;top:10px;left:15px;z-index:2;opacity:0.5;">
+      <p style="color:white">About me!</p><img src="img/web-header.jpg"></div>
 
     <!-- poloroid image -->
-    <div id="polaroid">
-      <img src="img/MK.jpg" alt="UCF Marching Knights">
-      <div class="polaroidText">
-        <h5 style="line-height:27px">Me playing the piccolo<br>
-        Photo credit: <a href="https://www.mikekit.com/" style="text-decoration: underline;">Mike Kitaif</a></h5>
-      </div>
+    <div style="position:relative; float:left; width:50%">
+      <div id="polaroid">
+        <img src="img/MK.jpg" alt="UCF Marching Knights">
+        <div class="polaroidText">
+          <h5 style="line-height:27px">Me playing the piccolo<br>
+            Photo credit: <a href="https://www.mikekit.com/" style="text-decoration: underline;">Mike Kitaif</a></h5>
+          </div>
+        </div>
     </div>
 
     <!-- my mini bio -->
-    <div id="bio" style="z-index: 2; color: white; position: relative; opacity: 0">
-      <p>
-        Hi there, welcome to my page! I'm Sandeep, and I'm a warm candle shining though the mysterious areas of life, as my name indicates. I currently study at UCF, majoring in Information Technology while minoring in Digital Media. I have a passion for creating
-        things, whether they're websites, music, email templates, drawings, voice skills, or on Minecraft. I like to have a philosophical outlook on life, finding and questioning the very nature and ethics of, well, everything. Metaphysics and healthy vibes are another interest
-        of mine. Oh, and I'm vegan!
-      </p>
-    </div>
-
-    <!-- "torch" -->
-    <!-- <div id="torch" style="width: 200px; height: 100px; border-radius: 50%; position: absolute; background-color: white; z-index: 0; opacity:0.5"></div> -->
-
-
-
-
-
-
-
-    <!-- resume -->
-    <div class="header">
-      <p>Resume</p>
-      <img src="img/web-header.jpg">
-    </div>
-
-    <!-- PDF -->
-    <div class="container-fluid center">
-      <a href="SandeepSinghResume.pdf" class="btn btn-info btn-lg" id="download">PDF</a>
-    </div>
-
-    <!-- online resume -->
-    <!-- the following div resume is used for smaller devices -->
-    <div class="visible-xs visible-sm">
-      <div class="panel-group">
-        <div class="panel panel-info" style="text-align: center">
-          <div class="panel-body">
-            Sandeep Singh<br> sansingh478@gmail.com
-          </div>
-
-          <div class="panel-heading">
-            <button type="button" class="btn-block" data-toggle="collapse" data-target="#edu">Education
-                        <span class="caret"></span></button>
-          </div>
-          <div class="collapse" id="edu">
-            <div class="panel-body">
-              Education: University of Central Florida, Orlando, FL<br> Bachelor of Science in Information Technology<br> Minor in Digital Media<br> Spring 2020<br> GPA: 3.7
-            </div>
-            <div class="panel-body">
-              • Florida – IT – Pathways to Success Scholarship, Spring 2017 - Present<br> • American Airlines Scholarship, Summer '16, '17, '18
-            </div>
-          </div>
-
-          <div class="panel-heading">
-            <button type="button" class="btn-block" data-toggle="collapse" data-target="#skills">Skills
-                        <span class="caret"></span></button>
-          </div>
-          <div class="collapse" id="skills">
-            <div class="panel-body">
-              • Languages: fluent in English and Spanish<br> • Computer programs: MailChimp, WordPress, Drupal, and Trello<br> • Computer languages: experienced in C, Java, HTML, CSS, and JavaScript
-            </div>
-          </div>
-
-          <div class="panel-heading">
-            <button type="button" class="btn-block" data-toggle="collapse" data-target="#work">Work
-                        <span class="caret"></span></button>
-          </div>
-          <div class="collapse" id="work">
-            <div class="panel-body">
-              <a href="https://bigeyeagency.com/"><em>BIGEYE Agency</em></a><br> Web Developer Intern<br> Orlando, FL<br> June 2018 - August 2018<br> • Used WordPress and Drupal to QA clients’ websites<br> • Created multiple email templates on MailChimp<br>              • Coded custom Amazon Alexa Skills for local use
-            </div>
-          </div>
-
-          <div class="panel-heading">
-            <button type="button" class="btn-block" data-toggle="collapse" data-target="#projects">Projects
-                        <span class="caret"></span></button>
-          </div>
-          <div class="collapse" id="projects">
-            <div class="panel-body">
-              Personal – <a href="https://github.com/sandeepsingh11/Battleship"><em>Battleship</em></a><br> Fall 2017 - Summer 2018<br> • Utilized Java UI classes to create a player interface<br> • Incorporated threads for proper game performance
-            </div>
-            <div class="panel-body">
-              College event – <a href="http://ucfgreenjobsfair.wordpress.com"><em>UCF Green Jobs Fair</em></a><br> December 2017 - March 2018<br> • Created and distributed flyers and website<br> • Contacted local companies to attend our fair<br> • Managed
-              tasks using Trello board
-            </div>
-            <div class="panel-body">
-              Personal – <em>eProfile</em><br> Fall 2017 - Spring 2018<br> • Composed from scratch using HTML and CSS<br> • Incorporated w3.CSS and Bootstrap framework for mobile use
-            </div>
-          </div>
-
-          <div class="panel-heading">
-            <button type="button" class="btn-block" data-toggle="collapse" data-target="#extra">Extracurricular
-                        <span class="caret"></span></button>
-          </div>
-          <div class="collapse" id="extra">
-            <div class="panel-body">
-              • American Sign Language, Public Relations, Spring 2018 - Present<br> • UCF Marching Knights, Media Coordinator, Fall 2017 - Present<br>
-            </div>
-          </div>
-
-        </div>
+    <div style="position:relative; float:right; width:50%">
+      <div id="bio" style="z-index: 2; position: relative;">
+        <p style="line-height:1.5; vertical-align: middle">
+          Hi there, welcome to my page! I'm Sandeep, and I'm a warm candle shining though the mysterious areas of life, as my name indicates. I currently study at UCF, majoring in Information Technology while minoring in Digital Media. I have a passion for creating
+          things, whether they're websites, music, email templates, drawings, voice skills, or on Minecraft. I like to have a philosophical outlook on life, finding and questioning the very nature and ethics of, well, everything. Metaphysics and healthy
+          vibes are another interest of mine. Oh, and I'm vegan!
+        </p>
       </div>
     </div>
 
-    <!-- still the online resume -->
-    <!-- the following div resume is used for larger devices -->
-    <div class="visible-md visible-lg" style="margin: auto 8%;">
-      <div class="panel panel-info">
-        <div class="panel-body">
-
-          <div class="center">
-            Sandeep Singh<br> sansingh478@gmail.com
-          </div>
-
-          <div class="panel-heading">Education:</div>
-          <div class="row">
-            <div class="col-md-8">
-              <em>University of Central Florida</em>
-            </div>
-            <div class="col-md-4" id="right">
-              Orlando, Fl
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-8">
-              Bachelor of Science in Information Technology
-            </div>
-            <div class="col-md-4" id="right">
-              Spring 2020
-            </div>
-          </div>
-          Minor in Digital Technology<br> GPA: 3.7<br>
-          <br>
-          <div class="row">
-            <div class="col-md-8">
-              Florida – IT – Pathways to Success Scholarship
-            </div>
-            <div class="col-md-4" id="right">
-              Spring 2017 - Present
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-8">
-              American Airlines Scholarship
-            </div>
-            <div class="col-md-4" id="right">
-              Summer '16, '17, '18
-            </div>
-          </div>
-
-          <div class="panel-heading">Skills:</div>
-          Languages: fluent in English and Spanish<br> Computer programs: MailChimp, WordPress, Drupal, and Trello<br> Computer languages: experienced in C, Java, HTML, CSS, and JavaScript
-
-          <div class="panel-heading">Work:</div>
-          <div class="row">
-            <div class="col-md-8">
-              <a href="https://bigeyeagency.com/"><em>BIGEYE Agency</em></a>
-            </div>
-            <div class="col-md-4" id="right">
-              Orlando, FL
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-8">
-              Web Developer Intern
-            </div>
-            <div class="col-md-4" id="right">
-              June 2018 - August 2018
-            </div>
-          </div>
-          <ul>
-            <li>Used WordPress and Drupal to QA clients’ websites</li>
-            <li>Created multiple email templates on MailChimp</li>
-            <li>Coded custom Amazon Alexa Skills for local use</li>
-          </ul>
-
-          <div class="panel-heading">Projects:</div>
-          <div class="row">
-            <div class="col-md-8">
-              Personal - <a href="https://github.com/sandeepsingh11/Battleship"><em>BattleShip</em></a>
-            </div>
-            <div class="col-md-4" id="right">
-              Fall 2017 - Summer 2018
-            </div>
-          </div>
-          <ul>
-            <li>Utilized Java UI classes to create a player interface</li>
-            <li>Incorporated threads for proper game performance</li>
-          </ul>
-          <div class="row">
-            <div class="col-md-7">
-              College event - <a href="http://ucfgreenjobsfair.wordpress.com"><em>UCF Green Jobs Fair</em></a>
-            </div>
-            <div class="col-md-5" id="right">
-              December 2017 – March 2018
-            </div>
-          </div>
-          <ul>
-            <li>Created and distributed flyers and website</li>
-            <li>Contacted local companies to attend our fair</li>
-            <li>Managed tasks using Trello board</li>
-          </ul>
-          <div class="row">
-            <div class="col-md-8">
-              Personal - <em>eProfile</em>
-            </div>
-            <div class="col-md-4" id="right">
-              Fall 2017 - Spring 2018
-            </div>
-          </div>
-          <ul>
-            <li>Composed from scratch using HTML and CSS</li>
-            <li>Incorporated w3.CSS and Bootstrap framework for mobile use</li>
-          </ul>
-
-          <div class="panel-heading">Extracurricular:</div>
-          <div class="row">
-            <div class="col-md-8">
-              American Sign Language, Public Relations
-            </div>
-            <div class="col-md-4" id="right">
-              Spring 2018 - Present
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-8">
-              UCF Marching Knights, Media Coordinator
-            </div>
-            <div class="col-md-4" id="right">
-              Fall 2017 - Present
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
+  </div>
 
 
 
-
-
-
-    <!-- contact -->
+  <!-- contact -->
+  <div id="contactContainer" style="position:fixed; top:0; left:2000px">
     <div class="header">
       <p>Contact me!</p><img src="img/web-header.jpg"></div>
 
@@ -366,34 +150,6 @@
   </div>
 
 
-
-
-
-
-
-
-  <!-- footer -->
-  <footer class="panel">
-    <div class="hidden-xs container-fluid">
-      <div class="row text-center">
-        <div class="col-sm-4"><a href="about.html">about</a></div>
-        <div class="col-sm-4"><a href="resume.html">resume</a></div>
-        <div class="col-sm-4"><a href="contact.html">contact</a></div>
-      </div>
-    </div>
-
-    <div class="container-fluid">
-      <div class="row text-center">
-        <div class="col-sm-1"></div>
-        <div class="col-xs-12 col-sm-3"><a href="https://www.facebook.com/sandeepsingh23">Facebook</a></div>
-        <div class="col-xs-12 col-sm-4"><a href="https://www.instagram.com/toodeep11/">Instagram</a></div>
-        <div class="col-xs-12 col-sm-3"><a href="https://www.linkedin.com/in/sandeep-singh-vegan">LinkedIn</a></div>
-        <div class="col-sm-1"></div>
-      </div>
-    </div>
-
-    <h5 style="text-align: center; margin: 0">Made from scratch by Sandeep | 2018 &copy;</h5>
-  </footer>
 
 
 
@@ -476,25 +232,41 @@
 
 
     $(document).ready(function() {
+      var bodyWidth = $('body').width();
+      $('#introContainer').css('width', bodyWidth);
+      $('#aboutContainer').css('width', bodyWidth);
+      $('#contactContainer').css('width', bodyWidth);
+
+      var polaroidHeight = $('#polaroid').height();
+      $('#bio').css('height', polaroidHeight);
+      $('#bio').css('line-height', polaroidHeight);
+
       $(window).scroll(function() {
         // fade in bio
-        var scrollVal = $(document).scrollTop();
-        var opacityVal = scrollVal / 1300;
-        console.log(scrollVal + ', ' + opacityVal);
+        var currentScroll = $(document).scrollTop();
+        var opacityVal = currentScroll / 1300;
+        // console.log(currentScroll + ', ' + opacityVal);
 
-        if (scrollVal >= 725) {
+        if (currentScroll >= 725) {
           $('#bio').css('opacity', opacityVal);
         }
 
-        // scroll indicator
+
+        // get site width and height
         var totalHeight = $(document).height();
         var winHeight = $(window).height();
         var winWidth = $(window).width();
         var height = totalHeight - winHeight;
-        
-        var scrolled = (scrollVal / height);
+
+        // apply to scroll indicator (compass)
+        var scrolled = (currentScroll / height);
         var circleScroll = scrolled * 270;
         $('#needle').css('transform', 'rotate(' + circleScroll + 'deg)');
+
+        // apply to horizontal scrolling
+        $('#introContainer').css('left', currentScroll * -1);
+        $('#aboutContainer').css('left', (currentScroll - 1000) * -1);
+        $('#contactContainer').css('left', (currentScroll - 2000) * -1);
       });
     });
   </script>
