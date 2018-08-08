@@ -7,10 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <meta name="description" content="Welcome to Sandeep's website! I'm an Information
-      Technology student at UCF who loves to code. Currently seeking a Bachelor's degree,
-      so check out what I have to offer!">
+        Technology student at UCF who loves to code. Check out how awesome I am by reading my bio!">
   <meta name="keywords" content="information technology, IT, UCF, university, code, technology, web design,
-      web development, computer, digital media, vegan, homepage">
+        web development, computer, digital media, vegan, about, about me">
   <meta name="author" content="Sandeep Singh">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -28,76 +27,478 @@
   </script>
   <!-- End Global site tag -->
 
-  <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="style.css">
 
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <!-- integrity and crossorigin for security check -->
+  </script>
 
   <link href='https://fonts.googleapis.com/css?family=Spicy Rice' rel='stylesheet'>
 
 </head>
 
 
-<body id="landing">
+<body id="hoverable">
 
-  <!-- background image -->
-  <div class="heroImg"></div>
+  <!-- <div class="mainContainer"> -->
+  <div>
+    <h1 id="name"><a href="index.html">SANDEEP SINGH</a></h1>
+  </div>
 
-  <!-- landing page content -->
-  <div id="landingContent">
-    <div>
-      <h1 class="center">Sandeep Singh</h1>
 
-      <h2 class="center">
-      Welcome to my website!</h2>
+  <!-- navbar -->
+  <div class="navbar" style="z-index: 5">
+    <div class="w3-bar" id="barContainer">
+      <!-- desktop navbar -->
+      <div class="w3-bar-item w3-button navItem" style="position:absolute;top:0;left:33%">home</div>
+      <div class="w3-bar-item w3-button w3-hide-small navItem" style="position:absolute;top:38%;right:0">about</div>
+      <div class="w3-bar-item w3-button w3-hide-small navItem" style="position:absolute;bottom:0;left:28%">resume</div>
+      <div class="w3-bar-item w3-button w3-hide-small navItem" style="position:absolute;top:38%;left:0">contact</div>
+      <img src="img/needle.png" id="needle" style="width:11px;position:absolute;top:14%;left:47%;z-index:3">
+
+      <!-- toggle the dropdown for mobile -->
+      <!-- <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="dropdown()">&#9776;</a> -->
     </div>
 
-    <div class="CTA">
-      <!-- CTA buttons; smaller screens -->
-      <div class="visible-xs visible-sm container">
-        <div class="row">
-          <div class="col-xs-2"></div>
-          <div class="col-xs-8">
-            <a href="about.html" class="btn btn-primary btn-lg btn-block">About me</a>
-          </div>
-          <div class="col-xs-2"></div>
-        </div>
-
-        <div class="row" >
-          <div class="col-xs-2"></div>
-          <div class="col-xs-8">
-            <a href="resume.html" class="btn btn-primary btn-lg btn-block">Resume</a>
-          </div>
-          <div class="col-xs-2"></div>
-        </div>
-
-        <div class="row">
-          <div class="col-xs-2"></div>
-          <div class="col-xs-8">
-            <a href="contact.html" class="btn btn-primary btn-lg btn-block">Contact me</a>
-          </div>
-          <div class="col-xs-2"></div>
-        </div>
-      </div>
-
-      <!-- CTA buttons; larger screens -->
-      <div class="visible-md visible-lg container">
-        <div class="row">
-          <div class="col-sm-4">
-            <a href="about.html" class="btn btn-primary btn-lg center">About me</a>
-          </div>
-          <div class="col-sm-4">
-            <a href="resume.html" class="btn btn-primary btn-lg center">Resume</a>
-          </div>
-          <div class="col-sm-4">
-            <a href="contact.html" class="btn btn-primary btn-lg center">Contact me</a>
-          </div>
-        </div>
-      </div>
+    <!-- mobile navbar -->
+    <div id="dropdownNav" class="w3-bar-block w3-hide-large w3-hide-medium">
+      <a href="about.html" class="w3-bar-item w3-button active">about</a>
+      <a href="resume.html" class="w3-bar-item w3-button">resume</a>
+      <a href="contact.html" class="w3-bar-item w3-button">contact</a>
     </div>
   </div>
+
+
+  <!-- candle -->
+  <img src="img/candle.jpg" id="candle" onclick="letThereBeLight()" style="width:100px;position:fixed;top:65px;left:10px;z-index:2;opacity:0.5;">
+
+
+
+
+
+
+
+
+  <div id="hScrollingContainers">
+
+    <!-- intro -->
+    <div class="horizontalContainer" id="introContainer">
+      <div class="center" style="margin:25% auto;">
+        <h2>Welcome to my website!<br><br></h2>
+        <h3>Enter if you dare...</h3>
+      </div>
+    </div>
+
+
+
+    <!-- about -->
+    <div class="horizontalContainer" id="aboutContainer">
+
+      <div class="header">
+        <p style="color:white">About me!</p>
+      </div>
+
+      <!-- poloroid image -->
+      <div style="position:relative; float:left; width:50%">
+        <div id="polaroid">
+          <img src="img/MK.jpg" alt="UCF Marching Knights">
+          <div class="polaroidText">
+            <h5 style="line-height:27px">Me playing the piccolo<br>
+            Photo credit: <a href="https://www.mikekit.com/" style="text-decoration: underline;">Mike Kitaif</a></h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- my mini bio -->
+      <div style="position:relative; float:right; width:50%">
+        <div id="bio" style="z-index: 2; position: relative;">
+          <p style="margin:25% auto">
+            Hi there, welcome to my page! I'm Sandeep, and I'm a warm candle shining though the mysterious areas of life, as my name indicates. I currently study at UCF, majoring in Information Technology while minoring in Digital Media. I have a passion for creating
+            things, whether they're websites, music, email templates, drawings, voice skills, or on Minecraft. I like to have a philosophical outlook on life, finding and questioning the very nature and ethics of, well, everything. Metaphysics and healthy
+            vibes are another interest of mine. Oh, and I'm vegan!
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- resume -->
+    <div class="horizontalContainer" id="resumeContainer">
+      <div>
+        <div class="panel panel-info" style="width:75%; margin: 0 auto;">
+          <div class="panel-body">
+
+            <div class="center">
+              Sandeep Singh<br> sansingh478@gmail.com
+            </div>
+
+
+            <div>
+              <div class="panel-heading slideBar">Skills:</div>
+              <div>
+                Languages: fluent in English and Spanish<br> Computer programs: MailChimp, WordPress, Drupal, and Trello<br> Computer languages: experienced in C, Java, HTML, CSS, and JavaScript
+              </div>
+            </div>
+
+
+            <div>
+              <div class="panel-heading slideBar">Work:</div>
+
+              <div>
+                <div class="col1">
+                  <a href="https://bigeyeagency.com/"><em>BIGEYE Agency</em></a>
+                </div>
+                <div class="col2">
+                  Orlando, FL
+                </div>
+              </div>
+
+              <div>
+                <div class="col1">
+                  Web Developer Intern
+                </div>
+                <div class="col2">
+                  June 2018 - August 2018
+                </div>
+              </div>
+              <ul>
+                <li>Used WordPress and Drupal to QA clients’ websites</li>
+                <li>Created multiple email templates on MailChimp</li>
+                <li>Coded custom Amazon Alexa Skills for local use</li>
+              </ul>
+            </div>
+
+
+            <div>
+              <div class="panel-heading slideBar">Education:</div>
+              <div>
+                <div class="col1">
+                  <em>University of Central Florida</em>
+                </div>
+                <div class="col2">
+                  Orlando, Fl
+                </div>
+              </div>
+
+              <div>
+                <div class="col1">
+                  Bachelor of Science in Information Technology
+                </div>
+                <div class="col2">
+                  Spring 2020
+                </div>
+                Minor in Digital Technology<br> GPA: 3.7<br>
+              </div>
+              <br>
+
+              <div>
+                <div class="col1">
+                  Florida – IT – Pathways to Success Scholarship
+                </div>
+                <div class="col2">
+                  Spring 2017 - Present
+                </div>
+              </div>
+
+              <div>
+                <div class="col1">
+                  American Airlines Scholarship
+                </div>
+                <div class="col2">
+                  Summer '16, '17, '18
+                </div>
+              </div>
+            </div>
+
+
+            <div>
+              <div class="panel-heading slideBar">Extracurricular:</div>
+              <div>
+                <div class="col1">
+                  American Sign Language, Public Relations
+                </div>
+                <div class="col2">
+                  Spring 2018 - Present
+                </div>
+              </div>
+
+              <div>
+                <div class="col1">
+                  UCF Marching Knights, Media Coordinator
+                </div>
+                <div class="col2">
+                  Fall 2017 - Present
+                </div>
+              </div>
+            </div>
+
+
+            <div>
+              <div class="panel-heading slideBar">Projects:</div>
+              <div>
+                <div class="col1">
+                  Personal - <a href="https://github.com/sandeepsingh11/Battleship"><em>BattleShip</em></a>
+                </div>
+                <div class="col2">
+                  Fall 2017 - Summer 2018
+                </div>
+              </div>
+              <ul>
+                <li>Utilized Java UI classes to create a player interface</li>
+                <li>Incorporated threads for proper game performance</li>
+              </ul>
+
+              <div>
+                <div class="col1">
+                  College event - <a href="http://ucfgreenjobsfair.wordpress.com"><em>UCF Green Jobs Fair</em></a>
+                </div>
+                <div class="col2">
+                  December 2017 – March 2018
+                </div>
+              </div>
+              <ul>
+                <li>Created and distributed flyers and website</li>
+                <li>Contacted local companies to attend our fair</li>
+                <li>Managed tasks using Trello board</li>
+              </ul>
+
+              <div>
+                <div class="col1">
+                  Personal - <em>eProfile</em>
+                </div>
+                <div class="col2">
+                  Fall 2017 - Spring 2018
+                </div>
+              </div>
+              <ul>
+                <li>Composed from scratch using HTML and CSS</li>
+                <li>Incorporated the W3.CSS and jQuery frameworks</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- contact -->
+    <div class="horizontalContainer" id="contactContainer">
+      <div class="header">
+        <p>Contact me!</p>
+      </div>
+
+      <!-- contact form -->
+      <div>
+        <form action="mailto:sansingh478@gmail.com">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" placeholder="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" class="form-control" placeholder="email" required>
+          </div>
+          <div class="form-group">
+            <label for="comment">Your comment:</label>
+            <textarea class="form-control" rows="4" placeholder="message to: sansingh478@gmail.com" required></textarea>
+          </div>
+          <h3><input type="submit" class="btn w3-black"></h3>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <script>
+    // for name title transition and inital set
+    window.onload = function() {
+      // #name <h1>
+      var nameContainer = document.getElementById('name');
+
+      // #name <h1> <a>
+      var name = nameContainer.childNodes[0];
+      name.style.marginLeft = "0px";
+
+      // inital set for mobile dropdown nav
+      var dropdown = document.getElementById("dropdownNav");
+      dropdown.style.height = "0px";
+
+
+      // set inital for activeBar and determine placement
+      var activeBar = document.getElementById("activeBar");
+      activeBar.style.marginLeft = "-290px";
+
+      var navItem = document.getElementsByClassName("active")[0];
+      switch (navItem.text) {
+        case "about":
+          activeBar.style.marginLeft = "25%";
+          break;
+
+        case "resume":
+          activeBar.style.marginLeft = "50%";
+          break;
+
+        case "contact":
+          activeBar.style.marginLeft = "75%";
+          break;
+      }
+    }
+
+    // script for navbar dropdown
+    function dropdown() {
+      var dropdown = document.getElementById("dropdownNav");
+
+      if (dropdown.style.height == "0px") {
+        dropdown.style.height = "165px";
+      } else {
+        dropdown.style.height = "0px";
+      }
+    }
+
+
+
+
+    // document.getElementById("hoverable").onmousemove = function(event) {
+    //   flashlight(event);
+    // };
+    //
+    // function flashlight(e) {
+    //   var torch = document.getElementById("torch");
+    //   var x = e.pageX - 100;
+    //   var y = e.pageY - 50;
+    //
+    //   torch.style.left = x + "px";
+    //   torch.style.top = y + "px";
+    // }
+
+    function letThereBeLight() {
+      var candle = document.getElementById("candle");
+      var photo = document.getElementById("polaroid");
+
+      candle.style.opacity = 0.8;
+      photo.style.opacity = 0.8;
+    }
+
+
+
+
+    $(document).ready(function() {
+
+      // set the containers' width and placement
+      var bodyWidth = $('body').width();
+      // var topSpacing = $(window).height() / 4;
+      var hContainers = $('#hScrollingContainers').children();
+      var containerPosition = [];
+      var iteration = 0;
+
+      $(hContainers).each(function() {
+        // iterate through each divContainer
+        $(this).css('position', 'fixed');
+        $(this).css('top', 0);
+        $(this).css('width', bodyWidth);
+        $(this).css('left', bodyWidth * iteration);
+        containerPosition.push(bodyWidth * iteration);
+        iteration++;
+      });
+
+      // = = = = = = = = = = = = = = =
+
+      // set sliding attribute
+      var theSlideBars = $('.slideBar');
+      $(theSlideBars).each(function() {
+        var slideSibling = $(this).siblings();
+        $(slideSibling).css('display', 'none');
+      })
+
+      // = = = = = = = = = = = = = = =
+
+      // set bio's width
+      var polaroidHeight = $('#polaroid').height();
+      $('#bio').css('height', polaroidHeight);
+      // $('#bio').css('line-height', polaroidHeight);
+
+      // = = = = = = = = = = = = = = =
+      var i = 0;
+
+      $(window).scroll(function() {
+        // fade in bio
+        var currentScroll = $(document).scrollTop();
+        var opacityVal = currentScroll / 1300;
+        // console.log(currentScroll + ', ' + opacityVal);
+
+        if (currentScroll >= 725) {
+          $('#bio').css('opacity', opacityVal);
+        }
+
+        // = = = = = = = = = = = = = = =
+
+        // get site width and height
+        var totalHeight = $(document).height();
+        var winHeight = $(window).height();
+        var winWidth = $(window).width();
+        var height = totalHeight - winHeight;
+
+        // apply to scroll indicator (compass)
+        var scrolled = (currentScroll / height);
+        var circleScroll = scrolled * 270;
+        $('#needle').css('transform', 'rotate(' + circleScroll + 'deg)');
+
+        // apply to horizontal scrolling
+        $(hContainers).each(function() {
+          $(this).css('left', (currentScroll - containerPosition[i]) * -1);
+          i++;
+
+          if (i >= 4) {
+            i = 0;
+          }
+        });
+
+      });
+
+      // = = = = = = = = = = = = = = =
+
+      // nav functionality
+      var navEle = $('#barContainer').children();
+      $(navEle).click(function() {
+
+        switch ($(this).text()) {
+          case 'home':
+            window.scrollTo(0, containerPosition[0]);
+            break;
+
+          case 'about':
+            window.scrollTo(0, containerPosition[1]);
+            break;
+
+          case 'resume':
+            window.scrollTo(0, containerPosition[2]);
+            break;
+
+          case 'contact':
+            window.scrollTo(0, containerPosition[3]);
+            break;
+        }
+      })
+
+      // = = = = = = = = = = = = = = =
+
+      // slide functionality
+      $('.slideBar').click(function() {
+        slideSibling = $(this).siblings();
+        $(slideSibling).slideToggle('slow');
+      });
+    });
+  </script>
 
 </body>
 
