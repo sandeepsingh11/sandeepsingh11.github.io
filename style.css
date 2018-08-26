@@ -214,23 +214,11 @@ a:link {
   color: #222222;
   text-align: center;
   width: 100%;
-  padding-bottom: 5px;
 }
 
 #bio {
   text-align: center;
   /* margin: 50px 5px 30px 5px; */
-}
-
-.col1 {
-  float: left;
-  width: 50%;
-}
-
-.col2 {
-  float: right;
-  width: 50%;
-  text-align: right;
 }
 
 form {
@@ -281,6 +269,19 @@ footer {
 .panel-body a {
   color: black;
   text-decoration: underline;
+}
+
+#resumeData td {
+  width: 250px;
+}
+
+ul {
+  margin: 10px 0;
+  padding-left: 25px;
+}
+
+.panel-heading li {
+  font-weight: normal;
 }
 
 @media only screen and (min-width:768px) {
