@@ -42,7 +42,7 @@
 <body id="hoverable">
 
   <!-- <div class="mainContainer"> -->
-  <div>
+  <div id="nameContainer">
     <h1 id="name"><a href="index.html">SANDEEP SINGH</a></h1>
   </div>
 
@@ -95,44 +95,45 @@
     <!-- about -->
     <div class="horizontalContainer" id="aboutContainer">
 
-      <table>
-        <tr>
-          <td colspan="2">
-            <div class="header">
-              <p style="color:white">About me!</p>
-            </div>
-          </td>
-        </tr>
+      <div style="background-color: #EFCF83">
+        <table style="color: black">
+          <tr>
+            <td colspan="2">
+              <div class="header">
+                <p>About me!</p>
+              </div>
+            </td>
+          </tr>
 
-        <tr>
-          <td>
-            <!-- poloroid image -->
-            <div style="position:relative; width:85%">
-              <div id="polaroid">
-                <img src="img/MK.jpg" alt="UCF Marching Knights">
-                <div class="polaroidText">
-                  <h5 style="line-height:27px">Me playing the piccolo<br>
-                  Photo credit: <a href="https://www.mikekit.com/" style="text-decoration: underline;">Mike Kitaif</a></h5>
+          <tr>
+            <td>
+              <!-- poloroid image -->
+              <div style="position:relative; width:90%; margin: auto">
+                <div id="polaroid">
+                  <img src="img/MK.jpg" alt="UCF Marching Knights">
+                  <div class="polaroidText">
+                    <h5 style="line-height:27px">Me playing the piccolo<br>
+                    Photo credit: <a href="https://www.mikekit.com/" style="text-decoration: underline;">Mike Kitaif</a></h5>
+                  </div>
                 </div>
               </div>
-            </div>
-          </td>
-          <td style="vertical-align: middle">
-            <!-- my mini bio -->
-            <div style="position:relative;">
-              <div id="bio" style="z-index: 2; position: relative;">
-                <p>
-                  Hi there, welcome to my page! I'm Sandeep, and I'm a warm candle shining though the mysterious areas of life, as my name indicates. I currently study at UCF, majoring in Information Technology while minoring in Digital Media. I have a passion for creating
-                  things, whether they're websites, music, email templates, drawings, voice skills, or on Minecraft. I like to have a philosophical outlook on life, finding and questioning the very nature and ethics of, well, everything. Metaphysics and healthy
-                  vibes are another interest of mine. Oh, and I'm vegan!
-                </p>
+            </td>
+            <td style="vertical-align: middle">
+              <!-- my mini bio -->
+              <div style="position:relative;">
+                <div id="bio" style="z-index: 2; position: relative">
+                  <p>
+                    Hi there, welcome to my page! I'm Sandeep, and I'm a warm candle shining though the mysterious areas of life, as my name indicates. I currently study at UCF, majoring in Information Technology while minoring in Digital Media. I have a passion for creating
+                    things, whether they're websites, music, email templates, drawings, voice skills, or on Minecraft. I like to have a philosophical outlook on life, finding and questioning the very nature and ethics of, well, everything. Metaphysics and healthy
+                    vibes are another interest of mine. Oh, and I'm vegan!
+                  </p>
+                </div>
               </div>
-            </div>
-          </td>
-        </tr>
+            </td>
+          </tr>
 
-      </table>
-
+        </table>
+      </div>
     </div>
 
 
@@ -289,27 +290,29 @@
 
     <!-- contact -->
     <div class="horizontalContainer" id="contactContainer">
-      <div class="header">
-        <p>Contact me!</p>
-      </div>
+      <div style="background-color: #EFCF83">
+        <div class="header">
+          <p>Contact me!</p>
+        </div>
 
-      <!-- contact form -->
-      <div>
-        <form action="mailto:sansingh478@gmail.com">
-          <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" class="form-control" placeholder="name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">E-mail:</label>
-            <input type="email" class="form-control" placeholder="email" required>
-          </div>
-          <div class="form-group">
-            <label for="comment">Your comment:</label>
-            <textarea class="form-control" rows="4" placeholder="message to: sansingh478@gmail.com" required></textarea>
-          </div>
-          <h3><input type="submit" class="btn w3-black"></h3>
-        </form>
+        <!-- contact form -->
+        <div class="w3-round" style="color: black; margin: auto 25%;">
+          <form action="mailto:sansingh478@gmail.com">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" class="form-control w3-input w3-round-large" placeholder="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail:</label>
+              <input type="email" class="form-control w3-input w3-round-large" placeholder="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Your message:</label>
+              <textarea class="form-control w3-input w3-round-large" rows="4" placeholder="message to: sansingh478@gmail.com" required></textarea>
+            </div>
+            <h3><input type="submit" class="w3-button w3-round" style="background-color: #54786A"></h3>
+          </form>
+        </div>
       </div>
     </div>
 
@@ -325,36 +328,11 @@
   <script>
     // for name title transition and inital set
     window.onload = function() {
-      // #name <h1>
-      var nameContainer = document.getElementById('name');
-
-      // #name <h1> <a>
-      var name = nameContainer.childNodes[0];
-      name.style.marginLeft = "0px";
 
       // inital set for mobile dropdown nav
       var dropdown = document.getElementById("dropdownNav");
       dropdown.style.height = "0px";
 
-
-      // set inital for activeBar and determine placement
-      var activeBar = document.getElementById("activeBar");
-      activeBar.style.marginLeft = "-290px";
-
-      var navItem = document.getElementsByClassName("active")[0];
-      switch (navItem.text) {
-        case "about":
-          activeBar.style.marginLeft = "25%";
-          break;
-
-        case "resume":
-          activeBar.style.marginLeft = "50%";
-          break;
-
-        case "contact":
-          activeBar.style.marginLeft = "75%";
-          break;
-      }
     }
 
     // script for navbar dropdown
@@ -367,8 +345,6 @@
         dropdown.style.height = "0px";
       }
     }
-
-
 
 
     // document.getElementById("hoverable").onmousemove = function(event) {
@@ -395,11 +371,22 @@
 
 
 
+
+
+
+
+
     $(document).ready(function() {
+
+      var nameContainer = $('#nameContainer');
+      var name = nameContainer.children();
+      var nameHeight = name.css('height');
+      // set for animation
+      name.find('a').css('margin-left', '0px');
+
 
       // set the containers' width and placement
       var bodyWidth = $('body').width();
-      // var topSpacing = $(window).height() / 4;
       var hContainers = $('#hScrollingContainers').children();
       var containerPosition = [];
       var iteration = 0;
@@ -407,7 +394,10 @@
       $(hContainers).each(function() {
         // iterate through each divContainer
         $(this).css('position', 'fixed');
-        $(this).css('top', 0);
+        if (iteration != 0)
+          $(this).css('top', nameHeight);
+        else
+          $(this).css('top', 0);
         $(this).css('width', bodyWidth);
         $(this).css('left', bodyWidth * iteration);
         containerPosition.push(bodyWidth * iteration);

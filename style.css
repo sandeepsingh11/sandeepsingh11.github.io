@@ -3,6 +3,8 @@
   src: url(gyptienne.ttf);
 }
 
+/* color scheme from: https://www.schemecolor.com/egyptian-art-color-scheme.php */
+
 html {
   height: 100%;
 }
@@ -222,7 +224,7 @@ a:link {
 }
 
 form {
-  margin: 8% 20%;
+  margin: 10% 25%;
 }
 
 .center {
@@ -276,7 +278,7 @@ footer {
 }
 
 ul {
-  margin: 10px 0;
+  margin: 7px 0;
   padding-left: 25px;
 }
 
@@ -382,7 +384,7 @@ ul {
     margin-left: 2%;
   }
   #polaroid {
-    width: 75%;
+    width: 85%;
   }
   #bio {
     text-align: center;
