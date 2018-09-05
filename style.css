@@ -122,17 +122,16 @@ a:link {
 
 .navbar {
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 5px;
   background-color: saddlebrown;
   color: white;
-  width: 180px;
-  height: 180px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   border: 5px solid #dea821;
   /* gold */
   min-height: 40px !important;
-  /* overwrite bootstrap style */
 }
 
 #barContainer {
@@ -153,7 +152,10 @@ a:link {
 
 .navItem {
   position: relative;
+  font-size: 15px;
   width: auto !important;
+  /* overwrite w3.css style */
+  padding: 0 !important;
   /* overwrite w3.css style */
   z-index: 1;
 }

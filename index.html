@@ -51,11 +51,12 @@
   <div class="navbar" style="z-index: 5">
     <div class="w3-bar" id="barContainer">
       <!-- desktop navbar -->
-      <div class="w3-bar-item w3-button navItem" style="position:absolute;top:0;left:33%">home</div>
-      <div class="w3-bar-item w3-button w3-hide-small navItem" style="position:absolute;top:38%;right:0">about</div>
-      <div class="w3-bar-item w3-button w3-hide-small navItem" style="position:absolute;bottom:0;left:28%">resume</div>
-      <div class="w3-bar-item w3-button w3-hide-small navItem" style="position:absolute;top:38%;left:0">contact</div>
-      <img src="img/needle.png" id="needle" style="width:11px;position:absolute;top:14%;left:47%;z-index:3">
+      <div class="w3-bar-item w3-button navItem" style="position:absolute;">home</div>
+      <div class="w3-bar-item w3-button w3-hide-small navItem" style="position:absolute;">about</div>
+      <div class="w3-bar-item w3-button w3-hide-small navItem" style="position:absolute;">resume</div>
+      <div class="w3-bar-item w3-button w3-hide-small navItem" style="position:absolute;">contact</div>
+      <img src="img/needle.png" id="needle" style="width:9px;position:absolute;z-index:3">
+
 
       <!-- toggle the dropdown for mobile -->
       <!-- <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="dropdown()">&#9776;</a> -->
@@ -397,6 +398,29 @@
         iteration++;
       });
 
+      // = = = = = = = = = = = = = = =
+
+      // nav compass positioning
+      var compassSize = parseInt( $('#barContainer').css('width') );
+      var navEle = $('#barContainer').children();
+      var navEleHeight = parseInt( $(navEle).css('height') );
+      var nav1 = $(navEle[0]);
+      var nav2 = $(navEle[1]);
+      var nav3 = $(navEle[2]);
+      var nav4 = $(navEle[3]);
+      var needle = $(navEle[4]);
+
+      $(nav1).css('top', 5);
+      $(nav1).css('left', ( ((compassSize - parseInt( $(nav1).css('width') )) / 2) ));
+      $(nav2).css('top', ( (compassSize - navEleHeight) / 2) );
+      $(nav2).css('right', 5);
+      $(nav3).css('bottom', 5);
+      $(nav3).css('left', ( ((compassSize - parseInt( $(nav3).css('width') )) / 2) ));
+      $(nav4).css('top', ( (compassSize - navEleHeight) / 2) );
+      $(nav4).css('left', 5);
+      $(needle).css('top', ( ((compassSize - parseInt( $(needle).css('height') )) / 2) ));
+      $(needle).css('left', ( ((compassSize - parseInt( $(needle).css('width') )) / 2) ));
+      
       // = = = = = = = = = = = = = = =
 
       // set sliding attribute
