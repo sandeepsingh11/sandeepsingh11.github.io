@@ -72,7 +72,7 @@
 
 
   <!-- candle -->
-  <img src="img/candle.jpg" id="candle" onclick="letThereBeLight()" style="width:100px;position:fixed;top:65px;left:10px;z-index:2;opacity:0.5;">
+  <!-- <img src="img/candle.jpg" id="candle" onclick="letThereBeLight()" style="width:100px;position:fixed;bottom:5px;left:5px;z-index:2;opacity:0.5;"> -->
 
 
 
@@ -143,6 +143,7 @@
             <table style="width: 100%">
               <div class="header">
                 <p>resume</p>
+                <a href="SandeepSinghResume.pdf"><button class="w3-button w3-round" style="background-color: #DED18D; color: black; position: absolute; top: 10px; right: 5px; z-index: 2">PDF</button></a>
               </div> 
               <tr id="resumeData" style="vertical-align: top">
                 <td>
@@ -291,25 +292,24 @@
 
         <!-- contact form -->
         <div class="w3-round" style="color: black;">
-          <form action="mailto:sansingh478@gmail.com">
+          <form action="https://formspree.io/sansingh478@gmail.com" method="POST">
             <div class="form-group">
               <label for="name">Name:</label>
-              <input type="text" class="form-control w3-input w3-round-large" placeholder="name" required>
+              <input type="text" class="form-control w3-input w3-round-large" name="name" placeholder="name" required>
             </div>
             <div class="form-group">
               <label for="email">E-mail:</label>
-              <input type="email" class="form-control w3-input w3-round-large" placeholder="email" required>
+              <input type="email" class="form-control w3-input w3-round-large" name="_replyto" placeholder="email" required>
             </div>
             <div class="form-group">
               <label for="message">Your message:</label>
-              <textarea class="form-control w3-input w3-round-large" rows="4" placeholder="message to: sansingh478@gmail.com" required></textarea>
+              <textarea class="form-control w3-input w3-round-large" rows="4" placeholder="your message here" required></textarea>
             </div>
-            <h3><input type="submit" class="w3-button w3-round" style="background-color: #54786A; color: white"></h3>
+            <h3><input type="submit" class="w3-button w3-round" value="SEND" style="background-color: #AA5725; color: white;"></h3>
           </form>
         </div>
       </div>
     </div>
-
   </div>
 
 
@@ -354,13 +354,13 @@
     //   torch.style.top = y + "px";
     // }
 
-    function letThereBeLight() {
-      var candle = document.getElementById("candle");
-      var photo = document.getElementById("polaroid");
+    // function letThereBeLight() {
+    //   var candle = document.getElementById("candle");
+    //   var photo = document.getElementById("polaroid");
 
-      candle.style.opacity = 0.8;
-      photo.style.opacity = 0.8;
-    }
+    //   candle.style.opacity = 0.8;
+    //   photo.style.opacity = 0.8;
+    // }
 
 
 
@@ -376,7 +376,7 @@
       var name = nameContainer.children();
       var nameHeight = name.css('height');
       // set for animation
-      name.find('a').css('margin-left', '0px');
+      // name.find('a').css('margin-left', '0px');
 
 
       // set the containers' width and placement
@@ -403,7 +403,7 @@
       // nav compass positioning
       var compassSize = parseInt( $('#barContainer').css('width') );
       var navEle = $('#barContainer').children();
-      var navEleHeight = parseInt( $(navEle).css('height') );
+      var navEleHeight = parseInt( $(navEle).outerHeight() );
       var nav1 = $(navEle[0]);
       var nav2 = $(navEle[1]);
       var nav3 = $(navEle[2]);
@@ -411,11 +411,11 @@
       var needle = $(navEle[4]);
 
       $(nav1).css('top', 5);
-      $(nav1).css('left', ( ((compassSize - parseInt( $(nav1).css('width') )) / 2) ));
+      $(nav1).css('left', ( ((compassSize - parseInt( $(nav1).outerWidth() )) / 2) ));
       $(nav2).css('top', ( (compassSize - navEleHeight) / 2) );
       $(nav2).css('right', 5);
       $(nav3).css('bottom', 5);
-      $(nav3).css('left', ( ((compassSize - parseInt( $(nav3).css('width') )) / 2) ));
+      $(nav3).css('left', ( ((compassSize - parseInt( $(nav3).outerWidth() )) / 2) ));
       $(nav4).css('top', ( (compassSize - navEleHeight) / 2) );
       $(nav4).css('left', 5);
       $(needle).css('top', ( ((compassSize - parseInt( $(needle).css('height') )) / 2) ));
@@ -494,7 +494,7 @@
 
         // apply to scroll indicator (compass)
         var scrolled = (currentScroll / height);
-        var circleScroll = scrolled * 270;
+        var circleScroll = scrolled * 315;
         $('#needle').css('transform', 'rotate(' + circleScroll + 'deg)');
 
         // apply to horizontal scrolling

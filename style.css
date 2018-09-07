@@ -10,6 +10,8 @@ html {
 }
 
 body {
+  /*-webkit-transition: left 2s;  Safari 
+  transition: left 2s;*/
   position: relative;
   padding: 0;
   background-color: black;
@@ -42,7 +44,7 @@ h1 {
 }
 
 #name a {
-  margin-left: -410px;
+  /*margin-left: -410px;*/
   -webkit-transition: margin-left 2.0s;
   /* Safari */
   transition: margin-left 2.0s;
@@ -143,7 +145,7 @@ a:link {
 }
 
 #barContainer img {
-  /* animation-name: spin;
+/* animation-name: spin;
   animation-delay: 0.2s;
   animation-duration: 1.8s;
   animation-timing-function: ease-in-out;
@@ -155,8 +157,9 @@ a:link {
   font-size: 15px;
   width: auto !important;
   /* overwrite w3.css style */
-  padding: 0 !important;
+  padding: 8px 6px !important;
   /* overwrite w3.css style */
+  border-radius: 10px;
   z-index: 1;
 }
 
@@ -200,10 +203,11 @@ a:link {
 #polaroid {
   position: relative;
   z-index: 2;
-  width: 90%;
+  width: 85%;
   margin: auto;
   background-color: white;
-  opacity: 0.75;
+  opacity: 0.90;
+  border-radius: 4px;
   transform: rotate(-2deg);
   -webkit-box-shadow: 8px 7px 21px 4px rgba(226,88,34,1);
   -moz-box-shadow: 8px 7px 21px 4px rgba(226,88,34,1);
@@ -215,6 +219,7 @@ a:link {
   width: 100%;
   height: auto;
   margin-bottom: 3px;
+  border-radius: 4px;
 }
 
 .polaroidText {
@@ -229,7 +234,7 @@ a:link {
 }
 
 form {
-  padding: 5% 15% 2% 14%;
+  padding: 3% 14% 2% 14%;
 }
 
 .center {
