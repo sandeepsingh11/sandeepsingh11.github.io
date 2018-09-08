@@ -143,12 +143,12 @@
             <table style="width: 100%">
               <div class="header">
                 <p>resume</p>
-                <a href="SandeepSinghResume.pdf"><button class="w3-button w3-round" style="background-color: #DED18D; color: black; position: absolute; top: 10px; right: 5px; z-index: 2">PDF</button></a>
+                <a href="SandeepSinghResume.pdf" target="_blank"><button class="w3-button w3-round" style="background-color: #DED18D; color: black; position: absolute; top: 10px; right: 5px; z-index: 2">PDF</button></a>
               </div> 
               <tr id="resumeData" style="vertical-align: top">
                 <td>
                   <div class="panel-heading resumeSubject" id="skills">
-                    Skills:
+                    <span>Skills:</span>
                     <div>
                       <div>
                       Spoken languages:
@@ -199,7 +199,7 @@
                 </td>
                 <td>
                   <div class="panel-heading resumeSubject" id="work">
-                    Work:
+                    <span>Work:</span>
                     <div>
                       <div>
                         <a href="https://bigeyeagency.com/"><em>BIGEYE Agency</em></a><br>
@@ -216,7 +216,7 @@
                 </td>
                 <td>
                   <div class="panel-heading resumeSubject" id="edu">
-                    Education:
+                    <span>Education:</span>
                     <div>
                       <em>University of Central Florida</em>
                       <ul>
@@ -242,7 +242,7 @@
                 </td>
                 <td>
                   <div class="panel-heading resumeSubject" id="extra">
-                    Extracurricular:
+                    <span>Extracurricular:</span>
                     <div>
                       <ul>
                         <li>
@@ -257,7 +257,7 @@
                 </td>
                 <td>
                   <div class="panel-heading resumeSubject" id="projects">
-                    Projects:
+                    <span>Projects:</span>
                     <div>
                       Personal - <a href="https://github.com/sandeepsingh11/Battleship"><em>BattleShip</em></a>
                       <ul>
@@ -371,6 +371,11 @@
 
 
     $(document).ready(function() {
+      // set body 'height'
+      var bodyWidth = $('body').width();
+      $('body').css( 'height', (bodyWidth * 3.4959) );
+      //console.log(bodyWidth + ' * 4 = ' + (bodyWidth * 4));
+
 
       var nameContainer = $('#nameContainer');
       var name = nameContainer.children();
@@ -380,7 +385,6 @@
 
 
       // set the containers' width and placement
-      var bodyWidth = $('body').width();
       var hContainers = $('#hScrollingContainers').children();
       var containerPosition = [];
       var iteration = 0;
@@ -400,7 +404,7 @@
 
       // = = = = = = = = = = = = = = =
 
-      // nav compass positioning
+      // nav compass element positioning
       var compassSize = parseInt( $('#barContainer').css('width') );
       var navEle = $('#barContainer').children();
       var navEleHeight = parseInt( $(navEle).outerHeight() );
@@ -423,11 +427,11 @@
       
       // = = = = = = = = = = = = = = =
 
-      // set sliding attribute
+      // set sliding attribute for resume container
       var resumeSubjectContainer = $('.resumeSubject');
       $(resumeSubjectContainer).each(function () {
         var subjectContent = $(this).children();
-        $(subjectContent).css('display', 'none'); 
+        $(subjectContent[1]).css('display', 'none');
       });
 
 
@@ -441,7 +445,7 @@
           // no subjects are currently active
 
           // activate slide element
-          $(subjectContent).slideToggle('slow');
+          $(subjectContent[1]).slideToggle('slow');
 
           activatedSubject = subject;
         }
@@ -452,7 +456,7 @@
             // the clicked subject is currently active; close it
 
             // de-activate slide element
-            $(subjectContent).slideToggle('slow');
+            $(subjectContent[1]).slideToggle('slow');
 
             activatedSubject = '';
           }
@@ -460,10 +464,11 @@
             // the clicked subject is currently de-active; open it and close the previous subject
 
             // de-activate previous active element
-            $('#' + activatedSubject).children().slideToggle('slow');
+            let closeThisSlide = $('#' + activatedSubject).children();
+            $(closeThisSlide[1]).slideToggle('slow');
 
             // activate current slide element
-            $(subjectContent).slideToggle('slow');
+            $(subjectContent[1]).slideToggle('slow');
 
             activatedSubject = subject;
           }
@@ -494,7 +499,7 @@
 
         // apply to scroll indicator (compass)
         var scrolled = (currentScroll / height);
-        var circleScroll = scrolled * 315;
+        var circleScroll = scrolled * 270;
         $('#needle').css('transform', 'rotate(' + circleScroll + 'deg)');
 
         // apply to horizontal scrolling

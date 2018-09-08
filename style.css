@@ -5,9 +5,6 @@
 
 /* color scheme from: https://www.schemecolor.com/egyptian-art-color-scheme.php */
 
-html {
-  height: 100%;
-}
 
 body {
   /*-webkit-transition: left 2s;  Safari 
@@ -17,8 +14,8 @@ body {
   background-color: black;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
+  line-height: 1.35;
   color: black;
-  height: 5000px;
   /* background: linear-gradient(240deg, black, #361f10);
   background-size: 400% 400%;
   -webkit-animation: bgAnimate 10s ease infinite;
@@ -288,12 +285,16 @@ footer {
 }
 
 ul {
-  margin: 7px 0;
+  margin: 0;
   padding-left: 25px;
 }
 
 .panel-heading li {
   font-weight: normal;
+}
+
+span {
+  cursor: pointer;
 }
 
 @media only screen and (min-width:768px) {
@@ -394,7 +395,7 @@ ul {
     margin-left: 2%;
   }
   #polaroid {
-    width: 90%;
+    width: 85%;
   }
   #bio {
     text-align: center;
