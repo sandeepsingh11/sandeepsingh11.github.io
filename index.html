@@ -63,11 +63,11 @@
     </div>
 
     <!-- mobile navbar -->
-    <div id="dropdownNav" class="w3-bar-block w3-hide-large w3-hide-medium">
+    <!-- div id="dropdownNav" class="w3-bar-block w3-hide-large w3-hide-medium">
       <a href="about.html" class="w3-bar-item w3-button active">about</a>
       <a href="resume.html" class="w3-bar-item w3-button">resume</a>
       <a href="contact.html" class="w3-bar-item w3-button">contact</a>
-    </div>
+    </div> -->
   </div>
 
 
@@ -79,238 +79,473 @@
 
 
 
+  <!-- DESKTOP MODE -->
+  <div id="largeScreen" style="display: none">
+    <div id="hScrollingContainers">
 
-
-  <div id="hScrollingContainers">
-
-    <!-- intro -->
-    <div class="horizontalContainer" id="introContainer">
-      <div class="center" style="margin:25% auto; color: white">
-        <h2>Welcome to my website!<br><br></h2>
-        <h3>Enter if you dare...</h3>
+      <!-- intro -->
+      <div class="horizontalContainer" id="introContainer">
+        <div class="center" style="margin:25% auto; color: white">
+          <h2>Welcome to my website!<br><br></h2>
+          <h3>Enter if you dare...</h3>
+        </div>
       </div>
-    </div>
 
 
 
-    <!-- about -->
-    <div class="horizontalContainer" id="aboutContainer">
+      <!-- about -->
+      <div class="horizontalContainer" id="aboutContainer">
 
-      <div style="background-color: #EFCF83; width: 75%; margin: auto">
-        <table>
+        <div style="background-color: #EFCF83; width: 75%; margin: auto">
+          <table>
+            <div class="header">
+              <p>About me!</p>
+            </div>
+
+            <tr>
+              <td>
+                <!-- poloroid image -->
+                <div style="position:relative; margin: auto">
+                  <div id="polaroid">
+                    <img src="img/MK.jpg" alt="UCF Marching Knights">
+                    <div class="polaroidText">
+                      <h5 style="line-height:27px">Me playing the piccolo<br>
+                      Photo credit: <a href="https://www.mikekit.com/" style="text-decoration: underline;">Mike Kitaif</a></h5>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td style="vertical-align: middle">
+                <!-- my mini bio -->
+                <div style="position:relative; width: 85%; margin: auto">
+                  <div id="bio" style="z-index: 2; position: relative">
+                    <p>
+                      Hi there, welcome to my page! I'm Sandeep, and I'm a warm candle shining though the mysterious areas of life, as my name indicates. I currently study at UCF, majoring in Information Technology while minoring in Digital Media. I have a passion for creating
+                      things, whether they're websites, music, email templates, drawings, voice skills, or on Minecraft. I like to have a philosophical outlook on life, finding and questioning the very nature and ethics of, well, everything! Metaphysics and healthy
+                      vibes are another interest of mine. Oh, and I'm vegan!
+                    </p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+          </table>
+        </div>
+      </div>
+
+
+      <!-- resume -->
+      <div class="horizontalContainer" id="resumeContainer">
+        <div>
+          <div class="panel panel-info" style="width:75%; margin: 0 auto;">
+            <div class="panel-body">
+
+              <table style="width: 100%">
+                <div class="header">
+                  <p>resume</p>
+                  <a href="SandeepSinghResume.pdf" target="_blank"><button class="w3-button w3-round" style="background-color: #DED18D; color: black; position: absolute; top: 10px; right: 5px; z-index: 2">PDF</button></a>
+                </div> 
+                <tr id="resumeData" style="vertical-align: top">
+                  <td>
+                    <div class="panel-heading resumeSubject" id="skills">
+                      <span>Skills:</span>
+                      <div>
+                        <div>
+                        Spoken languages:
+                        <ul>
+                          <li>
+                            English
+                          </li>
+                          <li>
+                            Spanish
+                          </li>
+                        </ul>
+                          Computer programs:
+                        <ul>
+                          <li>
+                            MailChimp
+                          </li>
+                          <li>
+                            WordPress
+                          </li>
+                          <li>
+                            Drupal
+                          </li>
+                          <li>
+                            Trello
+                          </li>
+                        </ul>
+                        Computer languages:
+                        <ul>
+                          <li>
+                            C
+                          </li>
+                          <li>
+                            Java
+                          </li>
+                          <li>
+                            HTML
+                          </li>
+                          <li>
+                            CSS
+                          </li>
+                          <li>
+                            JavaScript
+                          </li>
+                        </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="panel-heading resumeSubject" id="work">
+                      <span>Work:</span>
+                      <div>
+                        <div>
+                          <a href="https://bigeyeagency.com/"><em>BIGEYE Agency</em></a><br>
+                          Web Dev Intern<br>
+                          Summer 2018
+                        </div>
+                        <ul>
+                          <li>Used WordPress and Drupal to QA clients’ websites</li>
+                          <li>Created multiple email templates on MailChimp</li>
+                          <li>Coded custom Amazon Alexa Skills for local use</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="panel-heading resumeSubject" id="edu">
+                      <span>Education:</span>
+                      <div>
+                        <em>University of Central Florida</em>
+                        <ul>
+                          <li>
+                            Major: Information Technology
+                          </li>
+                          <li>
+                            Minor: Digital Media
+                          </li>
+                          <li>
+                            Spring 2020
+                          </li>
+                          <br>
+                          <li>
+                            Florida – IT – Pathways to Success Scholarship
+                          </li>
+                          <li>
+                            American Airlines Scholarship
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="panel-heading resumeSubject" id="extra">
+                      <span>Extracurricular:</span>
+                      <div>
+                        <ul>
+                          <li>
+                            American Sign Language, Public Relations
+                          </li>
+                          <li>
+                            UCF Marching Knights, Media Coordinator
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="panel-heading resumeSubject" id="projects">
+                      <span>Projects:</span>
+                      <div>
+                        Personal - <a href="https://github.com/sandeepsingh11/Battleship"><em>BattleShip</em></a>
+                        <ul>
+                          <li>Utilized Java UI classes to create a player interface</li>
+                          <li>Incorporated threads for proper game performance</li>
+                        </ul>
+                        College event - <a href="http://ucfgreenjobsfair.wordpress.com"><em>UCF Green Jobs Fair</em></a>
+                        <ul>
+                          <li>Created and distributed flyers and website</li>
+                          <li>Contacted local companies to attend our fair</li>
+                          <li>Managed tasks using Trello board</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- contact -->
+      <div class="horizontalContainer" id="contactContainer">
+
+        <div style="background-color: #EFCF83; width: 75%; margin: auto;">
           <div class="header">
-            <p>About me!</p>
+            <p>Contact me!</p>
           </div>
 
-          <tr>
-            <td>
-              <!-- poloroid image -->
-              <div style="position:relative; margin: auto">
-                <div id="polaroid">
-                  <img src="img/MK.jpg" alt="UCF Marching Knights">
-                  <div class="polaroidText">
-                    <h5 style="line-height:27px">Me playing the piccolo<br>
-                    Photo credit: <a href="https://www.mikekit.com/" style="text-decoration: underline;">Mike Kitaif</a></h5>
-                  </div>
-                </div>
+          <!-- contact form -->
+          <div class="w3-round" style="color: black;">
+            <form action="https://formspree.io/sansingh478@gmail.com" method="POST">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control w3-input w3-round-large" name="name" placeholder="name" required>
               </div>
-            </td>
-            <td style="vertical-align: middle">
-              <!-- my mini bio -->
-              <div style="position:relative; width: 85%; margin: auto">
-                <div id="bio" style="z-index: 2; position: relative">
-                  <p>
-                    Hi there, welcome to my page! I'm Sandeep, and I'm a warm candle shining though the mysterious areas of life, as my name indicates. I currently study at UCF, majoring in Information Technology while minoring in Digital Media. I have a passion for creating
-                    things, whether they're websites, music, email templates, drawings, voice skills, or on Minecraft. I like to have a philosophical outlook on life, finding and questioning the very nature and ethics of, well, everything! Metaphysics and healthy
-                    vibes are another interest of mine. Oh, and I'm vegan!
-                  </p>
-                </div>
+              <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control w3-input w3-round-large" name="_replyto" placeholder="email" required>
               </div>
-            </td>
-          </tr>
-
-        </table>
-      </div>
-    </div>
-
-
-    <!-- resume -->
-    <div class="horizontalContainer" id="resumeContainer">
-      <div>
-        <div class="panel panel-info" style="width:75%; margin: 0 auto;">
-          <div class="panel-body">
-
-            <table style="width: 100%">
-              <div class="header">
-                <p>resume</p>
-                <a href="SandeepSinghResume.pdf" target="_blank"><button class="w3-button w3-round" style="background-color: #DED18D; color: black; position: absolute; top: 10px; right: 5px; z-index: 2">PDF</button></a>
-              </div> 
-              <tr id="resumeData" style="vertical-align: top">
-                <td>
-                  <div class="panel-heading resumeSubject" id="skills">
-                    <span>Skills:</span>
-                    <div>
-                      <div>
-                      Spoken languages:
-                      <ul>
-                        <li>
-                          English
-                        </li>
-                        <li>
-                          Spanish
-                        </li>
-                      </ul>
-                        Computer programs:
-                      <ul>
-                        <li>
-                          MailChimp
-                        </li>
-                        <li>
-                          WordPress
-                        </li>
-                        <li>
-                          Drupal
-                        </li>
-                        <li>
-                          Trello
-                        </li>
-                      </ul>
-                      Computer languages:
-                      <ul>
-                        <li>
-                          C
-                        </li>
-                        <li>
-                          Java
-                        </li>
-                        <li>
-                          HTML
-                        </li>
-                        <li>
-                          CSS
-                        </li>
-                        <li>
-                          JavaScript
-                        </li>
-                      </ul>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div class="panel-heading resumeSubject" id="work">
-                    <span>Work:</span>
-                    <div>
-                      <div>
-                        <a href="https://bigeyeagency.com/"><em>BIGEYE Agency</em></a><br>
-                        Web Dev Intern<br>
-                        Summer 2018
-                      </div>
-                      <ul>
-                        <li>Used WordPress and Drupal to QA clients’ websites</li>
-                        <li>Created multiple email templates on MailChimp</li>
-                        <li>Coded custom Amazon Alexa Skills for local use</li>
-                      </ul>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div class="panel-heading resumeSubject" id="edu">
-                    <span>Education:</span>
-                    <div>
-                      <em>University of Central Florida</em>
-                      <ul>
-                        <li>
-                          Major: Information Technology
-                        </li>
-                        <li>
-                          Minor: Digital Media
-                        </li>
-                        <li>
-                          Spring 2020
-                        </li>
-                        <br>
-                        <li>
-                          Florida – IT – Pathways to Success Scholarship
-                        </li>
-                        <li>
-                          American Airlines Scholarship
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div class="panel-heading resumeSubject" id="extra">
-                    <span>Extracurricular:</span>
-                    <div>
-                      <ul>
-                        <li>
-                          American Sign Language, Public Relations
-                        </li>
-                        <li>
-                          UCF Marching Knights, Media Coordinator
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div class="panel-heading resumeSubject" id="projects">
-                    <span>Projects:</span>
-                    <div>
-                      Personal - <a href="https://github.com/sandeepsingh11/Battleship"><em>BattleShip</em></a>
-                      <ul>
-                        <li>Utilized Java UI classes to create a player interface</li>
-                        <li>Incorporated threads for proper game performance</li>
-                      </ul>
-                      College event - <a href="http://ucfgreenjobsfair.wordpress.com"><em>UCF Green Jobs Fair</em></a>
-                      <ul>
-                        <li>Created and distributed flyers and website</li>
-                        <li>Contacted local companies to attend our fair</li>
-                        <li>Managed tasks using Trello board</li>
-                      </ul>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            </table>
-
+              <div class="form-group">
+                <label for="message">Your message:</label>
+                <textarea class="form-control w3-input w3-round-large" rows="4" placeholder="your message here" required></textarea>
+              </div>
+              <h3><input type="submit" class="w3-button w3-round" value="SEND" style="background-color: #AA5725; color: white;"></h3>
+            </form>
           </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- contact -->
-    <div class="horizontalContainer" id="contactContainer">
-
-      <div style="background-color: #EFCF83; width: 75%; margin: auto;">
-        <div class="header">
-          <p>Contact me!</p>
-        </div>
-
-        <!-- contact form -->
-        <div class="w3-round" style="color: black;">
-          <form action="https://formspree.io/sansingh478@gmail.com" method="POST">
-            <div class="form-group">
-              <label for="name">Name:</label>
-              <input type="text" class="form-control w3-input w3-round-large" name="name" placeholder="name" required>
-            </div>
-            <div class="form-group">
-              <label for="email">E-mail:</label>
-              <input type="email" class="form-control w3-input w3-round-large" name="_replyto" placeholder="email" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Your message:</label>
-              <textarea class="form-control w3-input w3-round-large" rows="4" placeholder="your message here" required></textarea>
-            </div>
-            <h3><input type="submit" class="w3-button w3-round" value="SEND" style="background-color: #AA5725; color: white;"></h3>
-          </form>
         </div>
       </div>
     </div>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- MOBILE/TABLET MODE -->
+  <div id="notLargeScreen" style="display: none">
+    <div>
+
+      <!-- intro -->
+      <div id="mIntro">
+        <div style="position: relative; text-align: center; color: white">
+          <h2>Welcome to my website!<br><br></h2>
+          <h3>Enter if you dare...</h3>
+        </div>
+      </div>
+
+
+
+      <!-- about -->
+      <div style="margin: 25% auto;">
+
+        <div style="background-color: #EFCF83; width: 95%; margin: auto">
+        
+          <div class="header">
+            <p>About me!</p>
+          </div>
+          
+            <!-- poloroid image -->
+            <div style="position:relative; margin: 30px auto">
+              <div id="polaroid">
+                <img src="img/MK.jpg" alt="UCF Marching Knights">
+                <div class="polaroidText">
+                  <h5 style="line-height:27px">Me playing the piccolo<br>
+                  Photo credit: <a href="https://www.mikekit.com/" style="text-decoration: underline;">Mike Kitaif</a></h5>
+                </div>
+              </div>
+            </div>
+          
+            <!-- my mini bio -->
+            <div style="position:relative; width: 85%; margin: auto">
+              <div id="bio" style="z-index: 2; position: relative">
+                <p>
+                  Hi there, welcome to my page! I'm Sandeep, and I'm a warm candle shining though the mysterious areas of life, as my name indicates. I currently study at UCF, majoring in Information Technology while minoring in Digital Media. I have a passion for creating
+                  things, whether they're websites, music, email templates, drawings, voice skills, or on Minecraft. I like to have a philosophical outlook on life, finding and questioning the very nature and ethics of, well, everything! Metaphysics and healthy
+                  vibes are another interest of mine. Oh, and I'm vegan!
+                </p>
+              </div>
+            </div>
+        
+        </div>
+      </div>
+
+
+      <!-- resume -->
+      <div style="margin: 25% auto;">
+        <div>
+          <div class="panel panel-info" style="width:95%; margin: 0 auto;">
+            <div class="panel-body">
+            
+              <div class="header">
+                <p>resume</p>
+                <a href="SandeepSinghResume.pdf" target="_blank"><button class="w3-button w3-round" style="background-color: #DED18D; color: black; z-index: 2">PDF</button></a>
+              </div> 
+            
+              <div class="panel-heading resumeSubject" id="skills">
+                <span>Skills:</span>
+                <div>
+                  <div>
+                  Spoken languages:
+                  <ul>
+                    <li>
+                      English
+                    </li>
+                    <li>
+                      Spanish
+                    </li>
+                  </ul>
+                    Computer programs:
+                  <ul>
+                    <li>
+                      MailChimp
+                    </li>
+                    <li>
+                      WordPress
+                    </li>
+                    <li>
+                      Drupal
+                    </li>
+                    <li>
+                      Trello
+                    </li>
+                  </ul>
+                  Computer languages:
+                  <ul>
+                    <li>
+                      C
+                    </li>
+                    <li>
+                      Java
+                    </li>
+                    <li>
+                      HTML
+                    </li>
+                    <li>
+                      CSS
+                    </li>
+                    <li>
+                      JavaScript
+                    </li>
+                  </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="panel-heading resumeSubject" id="work">
+                <span>Work:</span>
+                <div>
+                  <div>
+                    <a href="https://bigeyeagency.com/"><em>BIGEYE Agency</em></a><br>
+                    Web Dev Intern<br>
+                    Summer 2018
+                  </div>
+                  <ul>
+                    <li>Used WordPress and Drupal to QA clients’ websites</li>
+                    <li>Created multiple email templates on MailChimp</li>
+                    <li>Coded custom Amazon Alexa Skills for local use</li>
+                  </ul>
+                </div>
+              </div>
+            
+              <div class="panel-heading resumeSubject" id="edu">
+                <span>Education:</span>
+                <div>
+                  <em>University of Central Florida</em>
+                  <ul>
+                    <li>
+                      Major: Information Technology
+                    </li>
+                    <li>
+                      Minor: Digital Media
+                    </li>
+                    <li>
+                      Spring 2020
+                    </li>
+                    <br>
+                    <li>
+                      Florida – IT – Pathways to Success Scholarship
+                    </li>
+                    <li>
+                      American Airlines Scholarship
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            
+              <div class="panel-heading resumeSubject" id="extra">
+                <span>Extracurricular:</span>
+                <div>
+                  <ul>
+                    <li>
+                      American Sign Language, Public Relations
+                    </li>
+                    <li>
+                      UCF Marching Knights, Media Coordinator
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            
+              <div class="panel-heading resumeSubject" id="projects">
+                <span>Projects:</span>
+                <div>
+                  Personal - <a href="https://github.com/sandeepsingh11/Battleship"><em>BattleShip</em></a>
+                  <ul>
+                    <li>Utilized Java UI classes to create a player interface</li>
+                    <li>Incorporated threads for proper game performance</li>
+                  </ul>
+                  College event - <a href="http://ucfgreenjobsfair.wordpress.com"><em>UCF Green Jobs Fair</em></a>
+                  <ul>
+                    <li>Created and distributed flyers and website</li>
+                    <li>Contacted local companies to attend our fair</li>
+                    <li>Managed tasks using Trello board</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- contact -->
+      <div style="margin: 25% auto;">
+
+        <div style="background-color: #EFCF83; width: 95%; margin: auto;">
+          <div class="header">
+            <p>Contact me!</p>
+          </div>
+
+          <!-- contact form -->
+          <div class="w3-round" style="color: black;">
+            <form action="https://formspree.io/sansingh478@gmail.com" method="POST">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control w3-input w3-round-large" name="name" placeholder="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control w3-input w3-round-large" name="_replyto" placeholder="email" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Your message:</label>
+                <textarea class="form-control w3-input w3-round-large" rows="4" placeholder="your message here" required></textarea>
+              </div>
+              <h3><input type="submit" class="w3-button w3-round" value="SEND" style="background-color: #AA5725; color: white;"></h3>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
 
 
 
@@ -371,10 +606,50 @@
 
 
     $(document).ready(function() {
+      // show a version
+      var wWidth = $(window).width();
+      var wHeight = $(window).height();
+      var desktop = false;
+      if (wWidth >= 1366) {
+        $('#largeScreen').css('display', 'block');
+        desktop = true;
+      }
+      else
+        $('#notLargeScreen').css('display', 'block');
+      console.log("window width = " + wWidth + ", w height = " + wHeight + ", desktop: " + desktop);
+
+
+
+
       // set body 'height'
+      var totalHeight = $(document).height();
+      console.log("doc height = " + totalHeight);
+      
       var bodyWidth = $('body').width();
-      $('body').css( 'height', (bodyWidth * 3.4959) );
-      //console.log(bodyWidth + ' * 4 = ' + (bodyWidth * 4));
+      console.log("body width = " + bodyWidth);
+      console.log("body height = " + $('body').height());
+      if (desktop)
+        $('body').css( 'height', (bodyWidth * 3.4959) );
+      totalHeight = $(document).height();
+      console.log("doc height = " + totalHeight);
+      
+      console.log(bodyWidth + ' * 3.5 = ' + (bodyWidth * 3.5));
+      console.log(bodyWidth + ' * 4 = ' + (bodyWidth * 4));
+      
+      totalHeight = $(document).height();
+      console.log("doc height = " + totalHeight);
+      // console.log( "document - body = " + (totalHeight - parseInt( ($('body').css( 'height'))) ) );
+      // console.log( "body - 4716 = " + ((bodyWidth * 3.4959) - 4716) );
+
+
+      var mIntro = $('#mIntro');
+      var middle = wHeight * 0.4;
+      $(mIntro).children().css('height', wHeight).css('top', middle);
+      console.log("middle = " + middle);
+
+
+
+
 
 
       var nameContainer = $('#nameContainer');
