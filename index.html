@@ -52,9 +52,9 @@
     <div class="w3-bar" id="barContainer">
       <!-- desktop navbar -->
       <div class="w3-bar-item w3-button navItem" style="position:absolute;">home</div>
-      <div class="w3-bar-item w3-button w3-hide-small navItem" style="position:absolute;">about</div>
-      <div class="w3-bar-item w3-button w3-hide-small navItem" style="position:absolute;">resume</div>
-      <div class="w3-bar-item w3-button w3-hide-small navItem" style="position:absolute;">contact</div>
+      <div class="w3-bar-item w3-button navItem" style="position:absolute;">about</div>
+      <div class="w3-bar-item w3-button navItem" style="position:absolute;">resume</div>
+      <div class="w3-bar-item w3-button navItem" style="position:absolute;">contact</div>
       <img src="img/needle.png" id="needle" style="width:9px;position:absolute;z-index:3">
 
 
@@ -342,7 +342,7 @@
       <!-- about -->
       <div style="margin: 25% auto;">
 
-        <div style="background-color: #EFCF83; width: 95%; margin: auto">
+        <div style="background-color: #EFCF83; width: 95%; margin: auto; padding-bottom: 5px;">
         
           <div class="header">
             <p>About me!</p>
@@ -378,16 +378,16 @@
       <div style="margin: 25% auto;">
         <div>
           <div class="panel panel-info" style="width:95%; margin: 0 auto;">
-            <div class="panel-body">
+            <div class="panel-body" style="padding-bottom: 5px;">
             
               <div class="header">
                 <p>resume</p>
-                <a href="SandeepSinghResume.pdf" target="_blank"><button class="w3-button w3-round" style="background-color: #DED18D; color: black; z-index: 2">PDF</button></a>
+                <a href="SandeepSinghResume.pdf" target="_blank"><button class="w3-button w3-round" style="background-color: #DED18D; color: black; z-index: 2; position: absolute; right: 5px; top: 7px;">PDF</button></a>
               </div> 
             
-              <div class="panel-heading resumeSubject" id="skills">
-                <span>Skills:</span>
-                <div>
+              <div class="panel-heading resumeSubject" id="skills" style="width: 100%">
+                <div style="padding: 10px 25%; text-align: center; font-weight: bold;"><span>Skills:</span></div>
+                <div style="background-color: #dea821; margin: auto 5px;">
                   <div>
                   Spoken languages:
                   <ul>
@@ -436,8 +436,8 @@
               </div>
             
               <div class="panel-heading resumeSubject" id="work">
-                <span>Work:</span>
-                <div>
+                <div style="padding: 10px 25%; text-align: center; font-weight: bold;"><span>Work:</span></div>
+                <div style="background-color: #dea821; margin: auto 5px;">
                   <div>
                     <a href="https://bigeyeagency.com/"><em>BIGEYE Agency</em></a><br>
                     Web Dev Intern<br>
@@ -452,8 +452,8 @@
               </div>
             
               <div class="panel-heading resumeSubject" id="edu">
-                <span>Education:</span>
-                <div>
+                <div style="padding: 10px 25%; text-align: center; font-weight: bold;"><span>Education:</span></div>
+                <div style="background-color: #dea821; margin: auto 5px;">
                   <em>University of Central Florida</em>
                   <ul>
                     <li>
@@ -477,8 +477,8 @@
               </div>
             
               <div class="panel-heading resumeSubject" id="extra">
-                <span>Extracurricular:</span>
-                <div>
+                <div style="padding: 10px 25%; text-align: center; font-weight: bold;"><span>Extracurricular:</span></div>
+                <div style="background-color: #dea821; margin: auto 5px;">
                   <ul>
                     <li>
                       American Sign Language, Public Relations
@@ -491,8 +491,8 @@
               </div>
             
               <div class="panel-heading resumeSubject" id="projects">
-                <span>Projects:</span>
-                <div>
+                <div style="padding: 10px 25%; text-align: center; font-weight: bold;"><span>Projects:</span></div>
+                <div style="background-color: #dea821; margin: auto 5px;">
                   Personal - <a href="https://github.com/sandeepsingh11/Battleship"><em>BattleShip</em></a>
                   <ul>
                     <li>Utilized Java UI classes to create a player interface</li>
@@ -643,7 +643,7 @@
 
 
       var mIntro = $('#mIntro');
-      var middle = wHeight * 0.4;
+      var middle = wHeight * 0.45;
       $(mIntro).children().css('height', wHeight).css('top', middle);
       console.log("middle = " + middle);
 
