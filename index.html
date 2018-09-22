@@ -7,9 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <meta name="description" content="Welcome to Sandeep's website! I'm an Information
-        Technology student at UCF who loves to code. Check out how awesome I am by reading my bio!">
+        Technology student at UCF who loves to code. Check out how awesome I am!">
   <meta name="keywords" content="information technology, IT, UCF, university, code, technology, web design,
-        web development, computer, digital media, vegan, about, about me">
+        web development, computer, digital media, vegan, about">
   <meta name="author" content="Sandeep Singh">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -363,9 +363,7 @@
             <div style="position:relative; width: 85%; margin: auto">
               <div id="bio" style="z-index: 2; position: relative">
                 <p>
-                  Hi there, welcome to my page! I'm Sandeep, and I'm a warm candle shining though the mysterious areas of life, as my name indicates. I currently study at UCF, majoring in Information Technology while minoring in Digital Media. I have a passion for creating
-                  things, whether they're websites, music, email templates, drawings, voice skills, or on Minecraft. I like to have a philosophical outlook on life, finding and questioning the very nature and ethics of, well, everything! Metaphysics and healthy
-                  vibes are another interest of mine. Oh, and I'm vegan!
+                  Hi there, welcome to my page! I'm Sandeep, and I'm a warm candle shining though the mysterious areas of life, as my name indicates. I currently study at UCF, majoring in Information Technology while minoring in Digital Media. I have a passion for creating things, whether they're websites, music, email templates, drawings, voice skills, or on Minecraft. I like to have a philosophical outlook on life, finding and questioning the very nature and ethics of, well, everything! Metaphysics and healthy vibes are another interest of mine. Oh, and I'm vegan!
                 </p>
               </div>
             </div>
@@ -556,24 +554,24 @@
 
   <script>
     // for name title transition and inital set
-    window.onload = function() {
+    // window.onload = function() {
 
-      // inital set for mobile dropdown nav
-      var dropdown = document.getElementById("dropdownNav");
-      dropdown.style.height = "0px";
+    //   // inital set for mobile dropdown nav
+    //   var dropdown = document.getElementById("dropdownNav");
+    //   dropdown.style.height = "0px";
 
-    }
+    // }
 
-    // script for navbar dropdown
-    function dropdown() {
-      var dropdown = document.getElementById("dropdownNav");
+    // // script for navbar dropdown
+    // function dropdown() {
+    //   var dropdown = document.getElementById("dropdownNav");
 
-      if (dropdown.style.height == "0px") {
-        dropdown.style.height = "165px";
-      } else {
-        dropdown.style.height = "0px";
-      }
-    }
+    //   if (dropdown.style.height == "0px") {
+    //     dropdown.style.height = "165px";
+    //   } else {
+    //     dropdown.style.height = "0px";
+    //   }
+    // }
 
 
     // document.getElementById("hoverable").onmousemove = function(event) {
@@ -602,104 +600,40 @@
 
 
 
+    // GLOBAL VARS
+    var wWidth = $(window).width();
+    var wHeight = $(window).height();
+    var bodyWidth = $('body').width();
+    var totalHeight = $(document).height();
+    var desktop = false;
+
+    var hContainers = $('#hScrollingContainers').children();
+    var containerPosition = [];
+
+    // get name position
+    var nameContainer = $('#nameContainer');
+    var name = nameContainer.children();
+    var nameHeight = $('#name').css('height');
+
+
 
 
 
     $(document).ready(function() {
+      // do when site is loaded
+
       // show a version
-      var wWidth = $(window).width();
-      var wHeight = $(window).height();
-      var desktop = false;
-      if (wWidth >= 1366) {
-        $('#largeScreen').css('display', 'block');
-        desktop = true;
-      }
-      else
-        $('#notLargeScreen').css('display', 'block');
-      console.log("window width = " + wWidth + ", w height = " + wHeight + ", desktop: " + desktop);
+      getVersion();
 
 
-
-
-      // set body 'height'
-      var totalHeight = $(document).height();
-      console.log("doc height = " + totalHeight);
+      // set the section containers' width and placement
+      setContainerPosition();
       
-      var bodyWidth = $('body').width();
-      console.log("body width = " + bodyWidth);
-      console.log("body height = " + $('body').height());
-      if (desktop)
-        $('body').css( 'height', (bodyWidth * 3.4959) );
-      totalHeight = $(document).height();
-      console.log("doc height = " + totalHeight);
       
-      console.log(bodyWidth + ' * 3.5 = ' + (bodyWidth * 3.5));
-      console.log(bodyWidth + ' * 4 = ' + (bodyWidth * 4));
-      
-      totalHeight = $(document).height();
-      console.log("doc height = " + totalHeight);
-      // console.log( "document - body = " + (totalHeight - parseInt( ($('body').css( 'height'))) ) );
-      // console.log( "body - 4716 = " + ((bodyWidth * 3.4959) - 4716) );
+      // set compass positioning
+      setCompass();
 
 
-      var mIntro = $('#mIntro');
-      var middle = wHeight * 0.45;
-      $(mIntro).children().css('height', wHeight).css('top', middle);
-      console.log("middle = " + middle);
-
-
-
-
-
-
-      var nameContainer = $('#nameContainer');
-      var name = nameContainer.children();
-      var nameHeight = name.css('height');
-      // set for animation
-      // name.find('a').css('margin-left', '0px');
-
-
-      // set the containers' width and placement
-      var hContainers = $('#hScrollingContainers').children();
-      var containerPosition = [];
-      var iteration = 0;
-
-      $(hContainers).each(function() {
-        // iterate through each divContainer
-        $(this).css('position', 'fixed');
-        if (iteration != 0)
-          $(this).css('top', nameHeight);
-        else
-          $(this).css('top', 0);
-        $(this).css('width', bodyWidth);
-        $(this).css('left', bodyWidth * iteration);
-        containerPosition.push(bodyWidth * iteration);
-        iteration++;
-      });
-
-      // = = = = = = = = = = = = = = =
-
-      // nav compass element positioning
-      var compassSize = parseInt( $('#barContainer').css('width') );
-      var navEle = $('#barContainer').children();
-      var navEleHeight = parseInt( $(navEle).outerHeight() );
-      var nav1 = $(navEle[0]);
-      var nav2 = $(navEle[1]);
-      var nav3 = $(navEle[2]);
-      var nav4 = $(navEle[3]);
-      var needle = $(navEle[4]);
-
-      $(nav1).css('top', 5);
-      $(nav1).css('left', ( ((compassSize - parseInt( $(nav1).outerWidth() )) / 2) ));
-      $(nav2).css('top', ( (compassSize - navEleHeight) / 2) );
-      $(nav2).css('right', 5);
-      $(nav3).css('bottom', 5);
-      $(nav3).css('left', ( ((compassSize - parseInt( $(nav3).outerWidth() )) / 2) ));
-      $(nav4).css('top', ( (compassSize - navEleHeight) / 2) );
-      $(nav4).css('left', 5);
-      $(needle).css('top', ( ((compassSize - parseInt( $(needle).css('height') )) / 2) ));
-      $(needle).css('left', ( ((compassSize - parseInt( $(needle).css('width') )) / 2) ));
-      
       // = = = = = = = = = = = = = = =
 
       // set sliding attribute for resume container
@@ -739,7 +673,7 @@
             // the clicked subject is currently de-active; open it and close the previous subject
 
             // de-activate previous active element
-            let closeThisSlide = $('#' + activatedSubject).children();
+            var closeThisSlide = $('#' + activatedSubject).children();
             $(closeThisSlide[1]).slideToggle('slow');
 
             // activate current slide element
@@ -748,45 +682,6 @@
             activatedSubject = subject;
           }
         }
-      });
-
-      // = = = = = = = = = = = = = = =
-      
-      var i = 0;
-
-      $(window).scroll(function() {
-        // fade in bio
-        var currentScroll = $(document).scrollTop();
-        var opacityVal = currentScroll / 1300;
-        // console.log(currentScroll + ', ' + opacityVal);
-
-        if (currentScroll >= 725) {
-          $('#bio').css('opacity', opacityVal);
-        }
-
-        // = = = = = = = = = = = = = = =
-
-        // get site width and height
-        var totalHeight = $(document).height();
-        var winHeight = $(window).height();
-        var winWidth = $(window).width();
-        var height = totalHeight - winHeight;
-
-        // apply to scroll indicator (compass)
-        var scrolled = (currentScroll / height);
-        var circleScroll = scrolled * 270;
-        $('#needle').css('transform', 'rotate(' + circleScroll + 'deg)');
-
-        // apply to horizontal scrolling
-        $(hContainers).each(function() {
-          $(this).css('left', (currentScroll - containerPosition[i]) * -1);
-          i++;
-
-          if (i >= 4) {
-            i = 0;
-          }
-        });
-
       });
 
       // = = = = = = = = = = = = = = =
@@ -815,7 +710,153 @@
       })
 
     });
+
+
+    $(window).scroll(function() {
+      // do when scrolling
+
+      // fade in bio
+      var currentScroll = $(document).scrollTop();
+      // var opacityVal = currentScroll / 1300;
+      // console.log(currentScroll + ', ' + opacityVal);
+
+      // if (currentScroll >= 725) {
+      //   $('#bio').css('opacity', opacityVal);
+      // }
+
+      // = = = = = = = = = = = = = = =
+
+      // get site's height
+      totalHeight = $(document).height();
+      wHeight = $(window).height();
+      var siteHeight = totalHeight - wHeight;
+
+      // apply to scroll indicator (compass)
+      var scrolled = (currentScroll / siteHeight);
+      var circleScroll = scrolled * 270;
+      $('#needle').css('transform', 'rotate(' + circleScroll + 'deg)');
+      // console.log(currentScroll + ' / (' + totalHeight + ' - ' + wHeight + ') = ' + (circleScroll * 270) + ' degrees');
+
+      var i = 0;
+      // apply horizontal scrolling
+      if (desktop){
+        $(hContainers).each(function() {
+          $(this).css('left', (currentScroll - containerPosition[i]) * -1);
+          i++;
+
+          if (i >= 4) {
+            i = 0;
+          }
+        });
+      }
+
+    });
+
+
+
+
+
+    $(window).resize(function() {
+      // reset website values when user's window resizes
+
+      getVersion();
+
+      setContainerPosition();
+
+      setCompass();    
+    });
+
+
+
+
+
+
+
+
+    function getVersion() {
+      // show a version
+
+      wWidth = $(window).width();
+      wHeight = $(window).height();
+      bodyWidth = $('body').width();
+      
+      // set version display
+      if (wWidth >= 1349) {
+        $('#notLargeScreen').css('display', 'none');
+        $('.navbar').css('display', 'block');
+        $('#largeScreen').css('display', 'block');
+        desktop = true;
+      }
+      else {
+        $('#largeScreen').css('display', 'none');
+        $('.navbar').css('display', 'block');
+        $('#notLargeScreen').css('display', 'block');
+        desktop = false;
+
+        if (wWidth < 400)
+          $('.navbar').css('display', 'none');
+      }
+
+      // set version size
+      if (desktop)
+        $('body').css( 'height', (bodyWidth * 3.4959) );
+      else {
+        $('body').css( 'height', 'auto' );
+        
+        var mIntro = $('#mIntro');
+        var mMiddle = wHeight * 0.45;
+        $(mIntro).children().css('height', wHeight).css('top', mMiddle);
+      }
+    }
+
+
+    function setContainerPosition() {
+      // clear any previous values by setting len to 0
+      containerPosition.length = 0;
+      var iteration = 0;
+
+      $(hContainers).each(function() {
+        // iterate through each divContainer
+        $(this).css('position', 'fixed');
+        if (iteration != 0)
+          $(this).css('top', nameHeight);
+        else
+          $(this).css('top', 0);
+        $(this).css('width', bodyWidth);
+        $(this).css('left', bodyWidth * iteration);
+        containerPosition.push(bodyWidth * iteration);
+        iteration++;
+      });
+    }
+
+
+
+    function setCompass() {
+      // nav compass element positioning
+      var compassSize = parseInt( $('#barContainer').css('width') );
+      var navEle = $('#barContainer').children();
+      var navEleHeight = parseInt( $(navEle).outerHeight() );
+      var nav1 = $(navEle[0]);
+      var nav2 = $(navEle[1]);
+      var nav3 = $(navEle[2]);
+      var nav4 = $(navEle[3]);
+      var needle = $(navEle[4]);
+
+      $(nav1).css('top', 5);
+      $(nav1).css('left', ( ((compassSize - parseInt( $(nav1).outerWidth() )) / 2) ));
+      $(nav2).css('top', ( (compassSize - navEleHeight) / 2) );
+      $(nav2).css('right', 5);
+      $(nav3).css('bottom', 5);
+      $(nav3).css('left', ( ((compassSize - parseInt( $(nav3).outerWidth() )) / 2) ));
+      $(nav4).css('top', ( (compassSize - navEleHeight) / 2) );
+      $(nav4).css('left', 5);
+      $(needle).css('top', ( ((compassSize - parseInt( $(needle).css('height') )) / 2) ));
+      $(needle).css('left', ( ((compassSize - parseInt( $(needle).css('width') )) / 2) ));
+    }
+
   </script>
+
+
 
 </body>
 
