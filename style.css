@@ -1,23 +1,29 @@
-html {
-  height: 100%;
-  background-color: #173b70;
-  /* dark blue */
+@font-face {
+  font-family: gyptienne;
+  src: url(gyptienne.ttf);
 }
 
+/* color scheme from: https://www.schemecolor.com/egyptian-art-color-scheme.php */
+
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
-  /* gray */
-  background-color: #021c44;
-  /* darker blue */
-  font-size: 20px;
-  margin: 0 1%;
+  /*-webkit-transition: left 2s;  Safari 
+  transition: left 2s;*/
+  position: relative;
   padding: 0;
-  overflow: auto;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 1.35;
+  color: black;
+  /* background: linear-gradient(240deg, black, #361f10);
+  background-size: 400% 400%;
+  -webkit-animation: bgAnimate 10s ease infinite;
+  animation: bgAnimate 10s ease infinite; */
 }
 
 h1 {
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: gyptienne, "Comic Sans MS", cursive, sans-serif;
   font-size: 2.1em;
   margin: 0 1%;
   /* margin-bottom: 4%; */
@@ -27,12 +33,15 @@ h1 {
 }
 
 #name {
+  position: fixed;
+  top: 0;
+  left: 5px;
   padding-bottom: 10px;
   overflow: hidden;
 }
 
 #name a {
-  margin-left: -410px;
+  /*margin-left: -410px;*/
   -webkit-transition: margin-left 2.0s;
   /* Safari */
   transition: margin-left 2.0s;
@@ -101,8 +110,8 @@ h1 {
 }
 
 p {
-  margin: 0 5%;
-  margin-bottom: 15px;
+  /* margin: 0 5%;
+  margin-bottom: 15px; */
 }
 
 a:link {
@@ -111,25 +120,43 @@ a:link {
 }
 
 .navbar {
-  background-color: #222222;
-  /* light black */
-  color: #babdc4;
-  /* gray */
-  margin: 10px auto;
-  padding: 0 30px;
-  border: 1px solid black;
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  background-color: saddlebrown;
+  color: white;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 5px solid #dea821;
+  /* gold */
   min-height: 40px !important;
-  /* overwrite bootstrap style */
 }
 
 #barContainer {
-  position: relative;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: inherit;
+  height: inherit;
+}
+
+#barContainer img {
+/* animation-name: spin;
+  animation-delay: 0.2s;
+  animation-duration: 1.8s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards; */
 }
 
 .navItem {
   position: relative;
-  width: 25% !important;
+  font-size: 15px;
+  width: auto !important;
   /* overwrite w3.css style */
+  padding: 8px 6px !important;
+  /* overwrite w3.css style */
+  border-radius: 10px;
   z-index: 1;
 }
 
@@ -157,29 +184,39 @@ a:link {
 .header {
   position: relative;
   text-align: center;
-  margin: 0 auto;
-  margin-bottom: 25px;
+  padding: 14px 0;
+  color: white;
+  background-color: #54786A;
+  /* Hooker's Green */
 }
 
 .header p {
   position: relative;
+  font-size: 25px;
   margin: 0;
   z-index: 1;
-  bottom: -35px;
 }
 
 #polaroid {
+  position: relative;
+  z-index: 2;
   width: 85%;
-  background-color: white;
-  box-shadow: 0 4px 10px 0 rgb(186, 189, 196);
   margin: auto;
-  margin-bottom: 25px;
+  background-color: white;
+  opacity: 0.90;
+  border-radius: 4px;
+  transform: rotate(-2deg);
+  -webkit-box-shadow: 8px 7px 21px 4px rgba(226,88,34,1);
+  -moz-box-shadow: 8px 7px 21px 4px rgba(226,88,34,1);
+  box-shadow: 8px 7px 21px 4px rgba(226,88,34,1);
+  /* flame */
 }
 
 #polaroid img {
   width: 100%;
   height: auto;
   margin-bottom: 3px;
+  border-radius: 4px;
 }
 
 .polaroidText {
@@ -190,11 +227,11 @@ a:link {
 
 #bio {
   text-align: center;
-  margin: 50px 5px 30px 5px;
+  /* margin: 50px 5px 30px 5px; */
 }
 
 form {
-  margin: 8% 20%;
+  padding: 3% 14% 2% 14%;
 }
 
 .center {
@@ -233,8 +270,8 @@ footer {
 }
 
 .panel-body {
-  background-color: #F0FFFF;
-  /* white, faint blue */
+  background-color: #EFCF83;
+  /* buff (parchment brown) */
   color: black;
 }
 
@@ -243,26 +280,39 @@ footer {
   text-decoration: underline;
 }
 
+#resumeData td {
+  width: 250px;
+}
+
+ul {
+  margin: 0;
+  padding-left: 25px;
+}
+
+.panel-heading li {
+  font-weight: normal;
+}
+
+span {
+  cursor: pointer;
+}
+
 @media only screen and (min-width:768px) {
   /* for tablet */
   #landingContent {
     margin: 0;
     width: 100%;
   }
-
   #landingContent h1 {
     margin: 12% auto;
   }
-
   #landingContent h2 {
     margin: 20% auto;
     margin-bottom: 0;
   }
-
   .CTA .btn-block {
     padding: 15px;
   }
-
   #activeBar {
     position: absolute;
     background-color: #4CAF50;
@@ -275,11 +325,9 @@ footer {
     /* Safari */
     transition: margin-left 2.0s;
   }
-
   .active {
     background-color: inherit;
   }
-
   a:hover {
     color: inherit;
     text-decoration: none;
@@ -296,13 +344,11 @@ footer {
   .navbar li:hover {
     background-color: #4CAF50;
   }
-
   .panel-heading {
     font-weight: bold;
     border-top: solid 5px;
     padding: 0;
   }
-
   #right {
     text-align: right;
   }
@@ -311,74 +357,113 @@ footer {
 @media only screen and (min-width:1024px) {
   /* For large screens */
   body {
-    margin: 0 10%;
     min-height: inherit;
   }
-
+  .mainContainer {
+    position: relative;
+    margin: auto 10%;
+  }
   h1 {
     font-size: 2.8em;
   }
-
   .heroImg {
     background-image: url(img/bridgewalk.jpg);
   }
-
   #landingContent {
     height: auto;
     margin: 8% auto;
   }
-
   #landingContent h1 {
     margin: 0 25%;
     margin-bottom: 10%;
   }
-
   #landingContent h2 {
     margin: 0 25%;
     margin-bottom: 10%;
   }
-
   .CTA {
     margin-top: 12%;
   }
-
   .CTA .row {
     margin-top: 0;
   }
-
   .noScroll {
     overflow: hidden;
   }
-
   h1 {
     margin: 0;
     margin-left: 2%;
   }
-
-  .navbar {
-    padding: 0 50px;
-  }
-
   #polaroid {
-    width: 60%;
+    width: 85%;
   }
-
   #bio {
     text-align: center;
-    margin: 65px 50px 30px 50px;
+    /* margin: 65px 50px 30px 50px; */
   }
-
   .panel-heading {
     margin-top: 10px;
   }
-
   .panel {
     margin: 0;
     margin-top: 15px;
   }
-
   .navbar-brand {
     margin: 0;
     padding: 0;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-100deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-100deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
+@-webkit-keyframes bgAnimate {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes bgAnimate {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
   }
 }

@@ -1,4 +1,0 @@
-<?php
-
-
-$name = $email = $message = "";

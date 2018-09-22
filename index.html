@@ -7,10 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <meta name="description" content="Welcome to Sandeep's website! I'm an Information
-      Technology student at UCF who loves to code. Currently seeking a Bachelor's degree,
-      so check out what I have to offer!">
+        Technology student at UCF who loves to code. Check out how awesome I am!">
   <meta name="keywords" content="information technology, IT, UCF, university, code, technology, web design,
-      web development, computer, digital media, vegan, homepage">
+        web development, computer, digital media, vegan, about">
   <meta name="author" content="Sandeep Singh">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -28,76 +27,836 @@
   </script>
   <!-- End Global site tag -->
 
-  <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="style.css">
 
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <!-- integrity and crossorigin for security check -->
+  </script>
 
   <link href='https://fonts.googleapis.com/css?family=Spicy Rice' rel='stylesheet'>
 
 </head>
 
 
-<body id="landing">
+<body id="hoverable">
 
-  <!-- background image -->
-  <div class="heroImg"></div>
+  <!-- <div class="mainContainer"> -->
+  <div id="nameContainer" style="color: white">
+    <h1 id="name"><a href="index.html">SANDEEP SINGH</a></h1>
+  </div>
 
-  <!-- landing page content -->
-  <div id="landingContent">
-    <div>
-      <h1 class="center">Sandeep Singh</h1>
 
-      <h2 class="center">
-      Welcome to my website!</h2>
+  <!-- navbar -->
+  <div class="navbar" style="z-index: 5">
+    <div class="w3-bar" id="barContainer">
+      <!-- desktop navbar -->
+      <div class="w3-bar-item w3-button navItem" style="position:absolute;">home</div>
+      <div class="w3-bar-item w3-button navItem" style="position:absolute;">about</div>
+      <div class="w3-bar-item w3-button navItem" style="position:absolute;">resume</div>
+      <div class="w3-bar-item w3-button navItem" style="position:absolute;">contact</div>
+      <img src="img/needle.png" id="needle" style="width:9px;position:absolute;z-index:3">
+
+
+      <!-- toggle the dropdown for mobile -->
+      <!-- <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="dropdown()">&#9776;</a> -->
     </div>
 
-    <div class="CTA">
-      <!-- CTA buttons; smaller screens -->
-      <div class="visible-xs visible-sm container">
-        <div class="row">
-          <div class="col-xs-2"></div>
-          <div class="col-xs-8">
-            <a href="about.html" class="btn btn-primary btn-lg btn-block">About me</a>
-          </div>
-          <div class="col-xs-2"></div>
-        </div>
+    <!-- mobile navbar -->
+    <!-- div id="dropdownNav" class="w3-bar-block w3-hide-large w3-hide-medium">
+      <a href="about.html" class="w3-bar-item w3-button active">about</a>
+      <a href="resume.html" class="w3-bar-item w3-button">resume</a>
+      <a href="contact.html" class="w3-bar-item w3-button">contact</a>
+    </div> -->
+  </div>
 
-        <div class="row" >
-          <div class="col-xs-2"></div>
-          <div class="col-xs-8">
-            <a href="resume.html" class="btn btn-primary btn-lg btn-block">Resume</a>
-          </div>
-          <div class="col-xs-2"></div>
-        </div>
 
-        <div class="row">
-          <div class="col-xs-2"></div>
-          <div class="col-xs-8">
-            <a href="contact.html" class="btn btn-primary btn-lg btn-block">Contact me</a>
-          </div>
-          <div class="col-xs-2"></div>
+  <!-- candle -->
+  <!-- <img src="img/candle.jpg" id="candle" onclick="letThereBeLight()" style="width:100px;position:fixed;bottom:5px;left:5px;z-index:2;opacity:0.5;"> -->
+
+
+
+
+
+
+  <!-- DESKTOP MODE -->
+  <div id="largeScreen" style="display: none">
+    <div id="hScrollingContainers">
+
+      <!-- intro -->
+      <div class="horizontalContainer" id="introContainer">
+        <div class="center" style="margin:25% auto; color: white">
+          <h2>Welcome to my website!<br><br></h2>
+          <h3>Enter if you dare...</h3>
         </div>
       </div>
 
-      <!-- CTA buttons; larger screens -->
-      <div class="visible-md visible-lg container">
-        <div class="row">
-          <div class="col-sm-4">
-            <a href="about.html" class="btn btn-primary btn-lg center">About me</a>
+
+
+      <!-- about -->
+      <div class="horizontalContainer" id="aboutContainer">
+
+        <div style="background-color: #EFCF83; width: 75%; margin: auto">
+          <table>
+            <div class="header">
+              <p>About me!</p>
+            </div>
+
+            <tr>
+              <td>
+                <!-- poloroid image -->
+                <div style="position:relative; margin: auto">
+                  <div id="polaroid">
+                    <img src="img/MK.jpg" alt="UCF Marching Knights">
+                    <div class="polaroidText">
+                      <h5 style="line-height:27px">Me playing the piccolo<br>
+                      Photo credit: <a href="https://www.mikekit.com/" style="text-decoration: underline;">Mike Kitaif</a></h5>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td style="vertical-align: middle">
+                <!-- my mini bio -->
+                <div style="position:relative; width: 85%; margin: auto">
+                  <div id="bio" style="z-index: 2; position: relative">
+                    <p>
+                      Hi there, welcome to my page! I'm Sandeep, and I'm a warm candle shining though the mysterious areas of life, as my name indicates. I currently study at UCF, majoring in Information Technology while minoring in Digital Media. I have a passion for creating
+                      things, whether they're websites, music, email templates, drawings, voice skills, or on Minecraft. I like to have a philosophical outlook on life, finding and questioning the very nature and ethics of, well, everything! Metaphysics and healthy
+                      vibes are another interest of mine. Oh, and I'm vegan!
+                    </p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+          </table>
+        </div>
+      </div>
+
+
+      <!-- resume -->
+      <div class="horizontalContainer" id="resumeContainer">
+        <div>
+          <div class="panel panel-info" style="width:75%; margin: 0 auto;">
+            <div class="panel-body">
+
+              <table style="width: 100%">
+                <div class="header">
+                  <p>resume</p>
+                  <a href="SandeepSinghResume.pdf" target="_blank"><button class="w3-button w3-round" style="background-color: #DED18D; color: black; position: absolute; top: 10px; right: 5px; z-index: 2">PDF</button></a>
+                </div> 
+                <tr id="resumeData" style="vertical-align: top">
+                  <td>
+                    <div class="panel-heading resumeSubject" id="skills">
+                      <span>Skills:</span>
+                      <div>
+                        <div>
+                        Spoken languages:
+                        <ul>
+                          <li>
+                            English
+                          </li>
+                          <li>
+                            Spanish
+                          </li>
+                        </ul>
+                          Computer programs:
+                        <ul>
+                          <li>
+                            MailChimp
+                          </li>
+                          <li>
+                            WordPress
+                          </li>
+                          <li>
+                            Drupal
+                          </li>
+                          <li>
+                            Trello
+                          </li>
+                        </ul>
+                        Computer languages:
+                        <ul>
+                          <li>
+                            C
+                          </li>
+                          <li>
+                            Java
+                          </li>
+                          <li>
+                            HTML
+                          </li>
+                          <li>
+                            CSS
+                          </li>
+                          <li>
+                            JavaScript
+                          </li>
+                        </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="panel-heading resumeSubject" id="work">
+                      <span>Work:</span>
+                      <div>
+                        <div>
+                          <a href="https://bigeyeagency.com/"><em>BIGEYE Agency</em></a><br>
+                          Web Dev Intern<br>
+                          Summer 2018
+                        </div>
+                        <ul>
+                          <li>Used WordPress and Drupal to QA clients’ websites</li>
+                          <li>Created multiple email templates on MailChimp</li>
+                          <li>Coded custom Amazon Alexa Skills for local use</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="panel-heading resumeSubject" id="edu">
+                      <span>Education:</span>
+                      <div>
+                        <em>University of Central Florida</em>
+                        <ul>
+                          <li>
+                            Major: Information Technology
+                          </li>
+                          <li>
+                            Minor: Digital Media
+                          </li>
+                          <li>
+                            Spring 2020
+                          </li>
+                          <br>
+                          <li>
+                            Florida – IT – Pathways to Success Scholarship
+                          </li>
+                          <li>
+                            American Airlines Scholarship
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="panel-heading resumeSubject" id="extra">
+                      <span>Extracurricular:</span>
+                      <div>
+                        <ul>
+                          <li>
+                            American Sign Language, Public Relations
+                          </li>
+                          <li>
+                            UCF Marching Knights, Media Coordinator
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="panel-heading resumeSubject" id="projects">
+                      <span>Projects:</span>
+                      <div>
+                        Personal - <a href="https://github.com/sandeepsingh11/Battleship"><em>BattleShip</em></a>
+                        <ul>
+                          <li>Utilized Java UI classes to create a player interface</li>
+                          <li>Incorporated threads for proper game performance</li>
+                        </ul>
+                        College event - <a href="http://ucfgreenjobsfair.wordpress.com"><em>UCF Green Jobs Fair</em></a>
+                        <ul>
+                          <li>Created and distributed flyers and website</li>
+                          <li>Contacted local companies to attend our fair</li>
+                          <li>Managed tasks using Trello board</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+
+            </div>
           </div>
-          <div class="col-sm-4">
-            <a href="resume.html" class="btn btn-primary btn-lg center">Resume</a>
+        </div>
+      </div>
+
+
+      <!-- contact -->
+      <div class="horizontalContainer" id="contactContainer">
+
+        <div style="background-color: #EFCF83; width: 75%; margin: auto;">
+          <div class="header">
+            <p>Contact me!</p>
           </div>
-          <div class="col-sm-4">
-            <a href="contact.html" class="btn btn-primary btn-lg center">Contact me</a>
+
+          <!-- contact form -->
+          <div class="w3-round" style="color: black;">
+            <form action="https://formspree.io/sansingh478@gmail.com" method="POST">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control w3-input w3-round-large" name="name" placeholder="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control w3-input w3-round-large" name="_replyto" placeholder="email" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Your message:</label>
+                <textarea class="form-control w3-input w3-round-large" rows="4" placeholder="your message here" required></textarea>
+              </div>
+              <h3><input type="submit" class="w3-button w3-round" value="SEND" style="background-color: #AA5725; color: white;"></h3>
+            </form>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- MOBILE/TABLET MODE -->
+  <div id="notLargeScreen" style="display: none">
+    <div>
+
+      <!-- intro -->
+      <div id="mIntro">
+        <div style="position: relative; text-align: center; color: white">
+          <h2>Welcome to my website!<br><br></h2>
+          <h3>Enter if you dare...</h3>
+        </div>
+      </div>
+
+
+
+      <!-- about -->
+      <div style="margin: 25% auto;">
+
+        <div style="background-color: #EFCF83; width: 95%; margin: auto; padding-bottom: 5px;">
+        
+          <div class="header">
+            <p>About me!</p>
+          </div>
+          
+            <!-- poloroid image -->
+            <div style="position:relative; margin: 30px auto">
+              <div id="polaroid">
+                <img src="img/MK.jpg" alt="UCF Marching Knights">
+                <div class="polaroidText">
+                  <h5 style="line-height:27px">Me playing the piccolo<br>
+                  Photo credit: <a href="https://www.mikekit.com/" style="text-decoration: underline;">Mike Kitaif</a></h5>
+                </div>
+              </div>
+            </div>
+          
+            <!-- my mini bio -->
+            <div style="position:relative; width: 85%; margin: auto">
+              <div id="bio" style="z-index: 2; position: relative">
+                <p>
+                  Hi there, welcome to my page! I'm Sandeep, and I'm a warm candle shining though the mysterious areas of life, as my name indicates. I currently study at UCF, majoring in Information Technology while minoring in Digital Media. I have a passion for creating things, whether they're websites, music, email templates, drawings, voice skills, or on Minecraft. I like to have a philosophical outlook on life, finding and questioning the very nature and ethics of, well, everything! Metaphysics and healthy vibes are another interest of mine. Oh, and I'm vegan!
+                </p>
+              </div>
+            </div>
+        
+        </div>
+      </div>
+
+
+      <!-- resume -->
+      <div style="margin: 25% auto;">
+        <div>
+          <div class="panel panel-info" style="width:95%; margin: 0 auto;">
+            <div class="panel-body" style="padding-bottom: 5px;">
+            
+              <div class="header">
+                <p>resume</p>
+                <a href="SandeepSinghResume.pdf" target="_blank"><button class="w3-button w3-round" style="background-color: #DED18D; color: black; z-index: 2; position: absolute; right: 5px; top: 7px;">PDF</button></a>
+              </div> 
+            
+              <div class="panel-heading resumeSubject" id="skills" style="width: 100%">
+                <div style="padding: 10px 25%; text-align: center; font-weight: bold;"><span>Skills:</span></div>
+                <div style="background-color: #dea821; margin: auto 5px;">
+                  <div>
+                  Spoken languages:
+                  <ul>
+                    <li>
+                      English
+                    </li>
+                    <li>
+                      Spanish
+                    </li>
+                  </ul>
+                    Computer programs:
+                  <ul>
+                    <li>
+                      MailChimp
+                    </li>
+                    <li>
+                      WordPress
+                    </li>
+                    <li>
+                      Drupal
+                    </li>
+                    <li>
+                      Trello
+                    </li>
+                  </ul>
+                  Computer languages:
+                  <ul>
+                    <li>
+                      C
+                    </li>
+                    <li>
+                      Java
+                    </li>
+                    <li>
+                      HTML
+                    </li>
+                    <li>
+                      CSS
+                    </li>
+                    <li>
+                      JavaScript
+                    </li>
+                  </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="panel-heading resumeSubject" id="work">
+                <div style="padding: 10px 25%; text-align: center; font-weight: bold;"><span>Work:</span></div>
+                <div style="background-color: #dea821; margin: auto 5px;">
+                  <div>
+                    <a href="https://bigeyeagency.com/"><em>BIGEYE Agency</em></a><br>
+                    Web Dev Intern<br>
+                    Summer 2018
+                  </div>
+                  <ul>
+                    <li>Used WordPress and Drupal to QA clients’ websites</li>
+                    <li>Created multiple email templates on MailChimp</li>
+                    <li>Coded custom Amazon Alexa Skills for local use</li>
+                  </ul>
+                </div>
+              </div>
+            
+              <div class="panel-heading resumeSubject" id="edu">
+                <div style="padding: 10px 25%; text-align: center; font-weight: bold;"><span>Education:</span></div>
+                <div style="background-color: #dea821; margin: auto 5px;">
+                  <em>University of Central Florida</em>
+                  <ul>
+                    <li>
+                      Major: Information Technology
+                    </li>
+                    <li>
+                      Minor: Digital Media
+                    </li>
+                    <li>
+                      Spring 2020
+                    </li>
+                    <br>
+                    <li>
+                      Florida – IT – Pathways to Success Scholarship
+                    </li>
+                    <li>
+                      American Airlines Scholarship
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            
+              <div class="panel-heading resumeSubject" id="extra">
+                <div style="padding: 10px 25%; text-align: center; font-weight: bold;"><span>Extracurricular:</span></div>
+                <div style="background-color: #dea821; margin: auto 5px;">
+                  <ul>
+                    <li>
+                      American Sign Language, Public Relations
+                    </li>
+                    <li>
+                      UCF Marching Knights, Media Coordinator
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            
+              <div class="panel-heading resumeSubject" id="projects">
+                <div style="padding: 10px 25%; text-align: center; font-weight: bold;"><span>Projects:</span></div>
+                <div style="background-color: #dea821; margin: auto 5px;">
+                  Personal - <a href="https://github.com/sandeepsingh11/Battleship"><em>BattleShip</em></a>
+                  <ul>
+                    <li>Utilized Java UI classes to create a player interface</li>
+                    <li>Incorporated threads for proper game performance</li>
+                  </ul>
+                  College event - <a href="http://ucfgreenjobsfair.wordpress.com"><em>UCF Green Jobs Fair</em></a>
+                  <ul>
+                    <li>Created and distributed flyers and website</li>
+                    <li>Contacted local companies to attend our fair</li>
+                    <li>Managed tasks using Trello board</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- contact -->
+      <div style="margin: 25% auto;">
+
+        <div style="background-color: #EFCF83; width: 95%; margin: auto;">
+          <div class="header">
+            <p>Contact me!</p>
+          </div>
+
+          <!-- contact form -->
+          <div class="w3-round" style="color: black;">
+            <form action="https://formspree.io/sansingh478@gmail.com" method="POST">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control w3-input w3-round-large" name="name" placeholder="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control w3-input w3-round-large" name="_replyto" placeholder="email" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Your message:</label>
+                <textarea class="form-control w3-input w3-round-large" rows="4" placeholder="your message here" required></textarea>
+              </div>
+              <h3><input type="submit" class="w3-button w3-round" value="SEND" style="background-color: #AA5725; color: white;"></h3>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    // for name title transition and inital set
+    // window.onload = function() {
+
+    //   // inital set for mobile dropdown nav
+    //   var dropdown = document.getElementById("dropdownNav");
+    //   dropdown.style.height = "0px";
+
+    // }
+
+    // // script for navbar dropdown
+    // function dropdown() {
+    //   var dropdown = document.getElementById("dropdownNav");
+
+    //   if (dropdown.style.height == "0px") {
+    //     dropdown.style.height = "165px";
+    //   } else {
+    //     dropdown.style.height = "0px";
+    //   }
+    // }
+
+
+    // document.getElementById("hoverable").onmousemove = function(event) {
+    //   flashlight(event);
+    // };
+    //
+    // function flashlight(e) {
+    //   var torch = document.getElementById("torch");
+    //   var x = e.pageX - 100;
+    //   var y = e.pageY - 50;
+    //
+    //   torch.style.left = x + "px";
+    //   torch.style.top = y + "px";
+    // }
+
+    // function letThereBeLight() {
+    //   var candle = document.getElementById("candle");
+    //   var photo = document.getElementById("polaroid");
+
+    //   candle.style.opacity = 0.8;
+    //   photo.style.opacity = 0.8;
+    // }
+
+
+
+
+
+
+    // GLOBAL VARS
+    var wWidth = $(window).width();
+    var wHeight = $(window).height();
+    var bodyWidth = $('body').width();
+    var totalHeight = $(document).height();
+    var desktop = false;
+
+    var hContainers = $('#hScrollingContainers').children();
+    var containerPosition = [];
+
+    // get name position
+    var nameContainer = $('#nameContainer');
+    var name = nameContainer.children();
+    var nameHeight = $('#name').css('height');
+
+
+
+
+
+    $(document).ready(function() {
+      // do when site is loaded
+
+      // show a version
+      getVersion();
+
+
+      // set the section containers' width and placement
+      setContainerPosition();
+      
+      
+      // set compass positioning
+      setCompass();
+
+
+      // = = = = = = = = = = = = = = =
+
+      // set sliding attribute for resume container
+      var resumeSubjectContainer = $('.resumeSubject');
+      $(resumeSubjectContainer).each(function () {
+        var subjectContent = $(this).children();
+        $(subjectContent[1]).css('display', 'none');
+      });
+
+
+      // slide functionality
+      var activatedSubject = '';
+      $(resumeSubjectContainer).click(function() {
+        var subject = $(this).attr('id');
+        subjectContent = $(this).children();
+
+        if (activatedSubject == '') {
+          // no subjects are currently active
+
+          // activate slide element
+          $(subjectContent[1]).slideToggle('slow');
+
+          activatedSubject = subject;
+        }
+        else {
+          // one subject is currently active
+
+          if (activatedSubject == subject) {
+            // the clicked subject is currently active; close it
+
+            // de-activate slide element
+            $(subjectContent[1]).slideToggle('slow');
+
+            activatedSubject = '';
+          }
+          else {
+            // the clicked subject is currently de-active; open it and close the previous subject
+
+            // de-activate previous active element
+            var closeThisSlide = $('#' + activatedSubject).children();
+            $(closeThisSlide[1]).slideToggle('slow');
+
+            // activate current slide element
+            $(subjectContent[1]).slideToggle('slow');
+
+            activatedSubject = subject;
+          }
+        }
+      });
+
+      // = = = = = = = = = = = = = = =
+
+      // nav functionality
+      var navEle = $('#barContainer').children();
+      $(navEle).click(function() {
+
+        switch ($(this).text()) {
+          case 'home':
+            window.scrollTo(0, containerPosition[0]);
+            break;
+
+          case 'about':
+            window.scrollTo(0, containerPosition[1]);
+            break;
+
+          case 'resume':
+            window.scrollTo(0, containerPosition[2]);
+            break;
+
+          case 'contact':
+            window.scrollTo(0, containerPosition[3]);
+            break;
+        }
+      })
+
+    });
+
+
+    $(window).scroll(function() {
+      // do when scrolling
+
+      // fade in bio
+      var currentScroll = $(document).scrollTop();
+      // var opacityVal = currentScroll / 1300;
+      // console.log(currentScroll + ', ' + opacityVal);
+
+      // if (currentScroll >= 725) {
+      //   $('#bio').css('opacity', opacityVal);
+      // }
+
+      // = = = = = = = = = = = = = = =
+
+      // get site's height
+      totalHeight = $(document).height();
+      wHeight = $(window).height();
+      var siteHeight = totalHeight - wHeight;
+
+      // apply to scroll indicator (compass)
+      var scrolled = (currentScroll / siteHeight);
+      var circleScroll = scrolled * 270;
+      $('#needle').css('transform', 'rotate(' + circleScroll + 'deg)');
+      // console.log(currentScroll + ' / (' + totalHeight + ' - ' + wHeight + ') = ' + (circleScroll * 270) + ' degrees');
+
+      var i = 0;
+      // apply horizontal scrolling
+      if (desktop){
+        $(hContainers).each(function() {
+          $(this).css('left', (currentScroll - containerPosition[i]) * -1);
+          i++;
+
+          if (i >= 4) {
+            i = 0;
+          }
+        });
+      }
+
+    });
+
+
+
+
+
+    $(window).resize(function() {
+      // reset website values when user's window resizes
+
+      getVersion();
+
+      setContainerPosition();
+
+      setCompass();    
+    });
+
+
+
+
+
+
+
+
+    function getVersion() {
+      // show a version
+
+      wWidth = $(window).width();
+      wHeight = $(window).height();
+      bodyWidth = $('body').width();
+      
+      // set version display
+      if (wWidth >= 1349) {
+        $('#notLargeScreen').css('display', 'none');
+        $('.navbar').css('display', 'block');
+        $('#largeScreen').css('display', 'block');
+        desktop = true;
+      }
+      else {
+        $('#largeScreen').css('display', 'none');
+        $('.navbar').css('display', 'block');
+        $('#notLargeScreen').css('display', 'block');
+        desktop = false;
+
+        if (wWidth < 400)
+          $('.navbar').css('display', 'none');
+      }
+
+      // set version size
+      if (desktop)
+        $('body').css( 'height', (bodyWidth * 3.4959) );
+      else {
+        $('body').css( 'height', 'auto' );
+        
+        var mIntro = $('#mIntro');
+        var mMiddle = wHeight * 0.45;
+        $(mIntro).children().css('height', wHeight).css('top', mMiddle);
+      }
+    }
+
+
+    function setContainerPosition() {
+      // clear any previous values by setting len to 0
+      containerPosition.length = 0;
+      var iteration = 0;
+
+      $(hContainers).each(function() {
+        // iterate through each divContainer
+        $(this).css('position', 'fixed');
+        if (iteration != 0)
+          $(this).css('top', nameHeight);
+        else
+          $(this).css('top', 0);
+        $(this).css('width', bodyWidth);
+        $(this).css('left', bodyWidth * iteration);
+        containerPosition.push(bodyWidth * iteration);
+        iteration++;
+      });
+    }
+
+
+
+    function setCompass() {
+      // nav compass element positioning
+      var compassSize = parseInt( $('#barContainer').css('width') );
+      var navEle = $('#barContainer').children();
+      var navEleHeight = parseInt( $(navEle).outerHeight() );
+      var nav1 = $(navEle[0]);
+      var nav2 = $(navEle[1]);
+      var nav3 = $(navEle[2]);
+      var nav4 = $(navEle[3]);
+      var needle = $(navEle[4]);
+
+      $(nav1).css('top', 5);
+      $(nav1).css('left', ( ((compassSize - parseInt( $(nav1).outerWidth() )) / 2) ));
+      $(nav2).css('top', ( (compassSize - navEleHeight) / 2) );
+      $(nav2).css('right', 5);
+      $(nav3).css('bottom', 5);
+      $(nav3).css('left', ( ((compassSize - parseInt( $(nav3).outerWidth() )) / 2) ));
+      $(nav4).css('top', ( (compassSize - navEleHeight) / 2) );
+      $(nav4).css('left', 5);
+      $(needle).css('top', ( ((compassSize - parseInt( $(needle).css('height') )) / 2) ));
+      $(needle).css('left', ( ((compassSize - parseInt( $(needle).css('width') )) / 2) ));
+    }
+
+  </script>
+
+
 
 </body>
 
