@@ -33,6 +33,8 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <!-- integrity and crossorigin for security check -->
   </script>
+  <!-- detect current font helper - from https://www.jqueryscript.net/text/jQuery-Plugin-To-Detect-Font-Family-In-An-Element-detectfont.html -->
+  <script src="jquery.detectfont.min.js"></script>
 
   <link href='https://fonts.googleapis.com/css?family=Spicy Rice' rel='stylesheet'>
 
@@ -621,6 +623,13 @@
 
     $(document).ready(function() {
       // do when site is loaded
+
+      // change text if custom is not loading (dang it Github Pages)
+      var name = $('#name').children();
+      var currentFont = $(name[0]).detectFont();
+      if ( currentFont != 'gyptienne' ) {
+        $(name[0]).text("Sandeep Singh");
+      }
 
       // show a version
       getVersion();
