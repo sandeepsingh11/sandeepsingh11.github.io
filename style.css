@@ -171,12 +171,6 @@ a:link {
   transition: height 1s;
 }
 
-.active {
-  background-color: #54786A !important;
-  /* Hooker's Green */
-  color: white;
-}
-
 .header {
   position: relative;
   text-align: center;
@@ -443,6 +437,12 @@ span {
   
   .resumeSubject:hover {
     cursor: pointer;
+    background-color: #54786A;
+    /* Hooker's Green */
+    color: white;
+  }
+
+  .active {
     background-color: #54786A;
     /* Hooker's Green */
     color: white;
