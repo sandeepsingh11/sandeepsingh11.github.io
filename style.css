@@ -172,7 +172,7 @@ a:link {
 }
 
 .active {
-  background-color: #54786A;
+  background-color: #54786A !important;
   /* Hooker's Green */
   color: white;
 }
